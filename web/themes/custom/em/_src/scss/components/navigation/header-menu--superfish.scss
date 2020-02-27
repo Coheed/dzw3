@@ -1,0 +1,131 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Superfish menu
+//
+ul.sf-menu {
+  @include clearfix;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 10;
+  li {
+    white-space: nowrap;
+    transition: background .2s;
+  }
+  a {
+    padding: .75rem 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+
+  // Level 1
+  //
+  > li {
+    > a {
+      padding: 0.889rem 0.778rem;
+      color: $sf-level-1-link-color;
+      font-weight: $sf-level-1-font-weight;
+      font-size: $sf-level-1-font-size;
+      text-transform: $sf-level-1-text-transform;
+      border-radius: .25rem;
+      &.sf-with-ul {
+        border-radius: .25rem .25rem 0 0;
+      }
+      &:hover {
+        color: $sf-level-1-link-color-hover;
+      }
+    }
+    &.sfHover > a {
+      background-color: $sf-level-2-bg-color;
+      color: $sf-level-1-link-color-active;
+    }
+  }
+
+  // Level 2
+  //
+  ul {
+    background: transparent;
+    width: auto!important;
+    min-width: 12em;
+    border-bottom: none;
+    li {
+      border-bottom: $sf-level-2-link-border-bottom;
+      &:first-child,
+      &:first-child > a {
+        border-radius: 0 .25rem 0 0;
+      }
+      &:last-child,
+      &:last-child > a {
+        border-radius: 0 0 .25rem .25rem;
+      }
+
+      a {
+        background-color: $sf-level-2-bg-color;
+        color: $sf-level-2-link-color;
+        font-size: $sf-level-2-font-size;
+        font-weight: $sf-level-2-font-weight;
+        text-transform: $sf-level-2-text-transform;
+        &:hover {
+          background-color: $sf-level-2-bg-color-hover;
+          color: $sf-level-2-link-color-hover;
+        }
+      }
+      &.sfHover > a {
+        background-color: darken($sf-level-2-bg-color, 2%);
+        color: $sf-level-2-link-color-hover;
+      }
+      &.last {
+        border-bottom: none;
+      }
+    }
+    ul li a {
+      background: darken($sf-level-2-bg-color, 2%);
+    }
+  }
+  
+  // Arrows
+  //
+  .sf-with-ul {
+    padding-right: 24px;
+    position: relative;
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f078";
+      margin-top: -6px;
+      font-size: .6rem;
+      font-style: normal;
+      line-height: .6rem;
+      position: absolute;
+      right: 8px;
+      top: 50%;
+    }
+  }
+  ul .sf-with-ul {
+    &:before {
+      content: "\f105";
+      font-weight: 900;
+      color: $sf-level-2-link-arrow-down-color;
+      right: 15px;
+    }
+  }
+  span.sf-sub-indicator {
+    display: none;
+  }
+}
+
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+  transition: none;
+  ul {
+    top: 100%!important;
+  }
+  ul ul {
+    top: 0!important;
+  }
+}

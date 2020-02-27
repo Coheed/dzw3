@@ -1,0 +1,86 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+.header--bottom-wrapper {
+  transition: all .3s ease;
+}
+
+.header-stuck {
+  border-bottom-color: $header-bg-color;
+  padding: 10px 0;
+  box-shadow: 0 0 20px 0 rgba(#000, .7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+//
+// Override header overlay style
+//
+.header--overlay-style .header .header-stuck {
+  background: $header-bg-color;
+  color: #000;
+  .logo-dark {
+    display: block;
+  }
+  .logo-light {
+    display: none;
+  }
+  a, button {
+    color: $header-link-color;
+    &:hover {
+      color: rgba($header-link-color, .7);
+    }
+  }
+
+  //
+  // Superfish menu
+  //
+  ul.sf-menu a {
+    color: $sf-level-2-link-color;
+    &:hover {
+      color: $sf-level-2-link-color-hover;
+    }
+  }
+
+  ul.sf-menu > li {
+    > a {
+      color: $sf-level-1-link-color;
+      &:hover {
+        color: $sf-level-1-link-color-hover;
+      }
+    }
+    &.sfHover > a {
+      color: $sf-level-1-link-color-active;
+    }
+  }
+
+  //
+  // TB Mega Menu
+  //
+  .tb-megamenu .nav > li > a,
+  .tb-megamenu .nav > li > span.tb-megamenu-no-link {
+    color: $tb-menu-level-1-link-color;
+    &:hover {
+      color: $tb-menu-level-1-link-color-hover;
+    }
+  }
+  .tb-megamenu .nav > .dropdown > .dropdown-toggle .caret {
+    border-top-color: $tb-menu-level-1-link-color;
+  }
+
+
+  //
+  // Action menu
+  //
+  .header--action-menu li {
+    border-color: $header-action-menu-borders-color;
+  }
+}
+
+

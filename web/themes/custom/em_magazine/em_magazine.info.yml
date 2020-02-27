@@ -1,0 +1,25 @@
+name: EM Magazine
+type: theme
+base theme: em
+description: 'Lifestyle Blog/Magazine.'
+package: EM
+version: VERSION
+core: 8.x
+
+regions:
+  header_secondary_menu: 'Header secondary menu'
+  header_main_menu: 'Header main menu'
+  tabs: 'Tabs'
+  page_title: 'Page title'
+  breadcrumb: 'Breadcrumb'
+  content: 'Main content'
+  offcanvas_sidebar: 'Off-Canvas sidebar'
+  footer_top: 'Footer top'
+  footer_bottom: 'Footer bottom'
+
+
+features:
+  - comment_user_picture
+  - comment_user_verification
+  - logo
+  - favicon

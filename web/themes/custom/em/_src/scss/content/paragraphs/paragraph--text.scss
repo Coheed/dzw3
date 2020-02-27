@@ -1,0 +1,12 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Paragraph: text
+//
+.paragraph--type--text {
+  @include paragraph__type-text;
+}

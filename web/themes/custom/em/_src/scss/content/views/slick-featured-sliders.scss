@@ -1,0 +1,262 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Slider Content
+//
+%featured--slider {
+  .view-content > div {
+    position: relative;
+  }
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  a.background-link {
+    @include text-hide(true);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index:10;
+  }
+
+  // Image Overlay
+  //
+  .media-image:before {
+    @include make-color-overlay(rgba($gray-blue-900, .25), 5);
+    content: '';
+  }
+
+  // Content
+  //
+  .content-wrapper {
+    //width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  // Channel (Category)
+  //
+  .channel {
+    margin-bottom: .75rem;
+    font-family: $theme-secondary-font;
+    font-size: 0.89rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    a:hover {
+      color: rgba(#FFF, .7);
+    }
+  }
+
+  // Title
+  //
+  .title {
+    margin-bottom: .778rem;
+    @media screen and (min-width: 1200px) and (min-height: 900px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Author info
+  //
+  .authored-info {
+    color: rgba(#FFF, .8);
+    font-family: $theme-secondary-font;
+    font-size: .78rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    a, span {
+      text-decoration: underline;
+      &:hover {
+        color: rgba(#FFF, .7);
+      }
+    }
+  }
+
+  hr {
+    width: 10%;
+    margin: 1rem auto;
+    border-top: 5px dotted #FFF;
+  }
+
+  .btn {
+    font-family:  $theme-secondary-font;
+    font-weight: 500;
+  }
+
+  // Featured slider container
+  //
+  .content-wrapper {
+    height: 100%;
+  }
+}
+
+
+//
+// Init Slider
+//
+%init--optionset {
+  .slick-slide {
+    position: relative;
+  }
+  .media-image {
+    opacity: 0;
+    transition: opacity .9s ease-in-out;
+    &:before {
+      transition: opacity .4s ease-in-out;
+    }
+  }
+  .content-wrapper {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+  }
+  &.slick--initialized {
+    .media-image {
+      opacity: 1;
+      &:before {
+        opacity: 1;
+      }
+    }
+    .content-wrapper {
+      opacity: 1;
+    }
+  }
+}
+
+
+//
+// Animation
+//
+%content-animation {
+  .slick-track {
+    .channel, .title, .authored-info, hr, .btn-wrapper {
+      opacity: 0;
+      position: relative;
+      transition: top .6s ease-in-out, opacity .6s ease-in-out;
+    }
+    .channel {
+      top: 50px;
+    }
+    .title, .btn-wrapper {
+      top: 40px;
+    }
+    hr {
+      top: 0;
+    }
+    .authored-info {
+      top: -20px;
+    }
+
+    .slick-active {
+      .channel, .title, .authored-info, hr, .btn-wrapper {
+        top: 0;
+        opacity: 1;
+      }
+      .channel {
+        transition-delay: .2s;
+      }
+      .title {
+        transition-delay: .6s;
+      }
+      .authored-info {
+        transition-delay: .9s;
+      }
+      hr {
+        transition-delay: 1s;
+      }
+      .btn-wrapper {
+        transition-delay: .9s;
+      }
+    }
+  }
+}
+
+
+//
+// Featured - Single item slider
+//
+.slick--optionset--em-single-item-slider {
+  @extend %featured--slider;
+  @extend %init--optionset;
+  @extend %content-animation;
+  .title {
+    font-size: 2.5rem;
+    @include media-breakpoint-up(lg) {
+      padding: 0 3rem;
+    }
+  }
+  @media screen and (min-width: 1200px) and (min-height: 900px) {
+    .title {
+      padding: 0;
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+    }
+    &.h-100 {
+      .title {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+      }
+    }
+  }
+  .btn {
+    padding: .4rem 1.4rem;
+    font-size: .779rem;
+    @media screen and (min-width: 1200px) and (min-height: 900px) {
+      padding: .5rem 1.8rem .6rem;
+      font-size: .89rem;
+    }
+  }
+}
+
+
+//
+// Featured - Center mode slider
+//
+.slick--optionset--em-center-mode-featured-slider {
+  @extend %featured--slider;
+  @extend %init--optionset;
+  @extend %content-animation;
+  .media-image {
+    height: 55vh;
+  }
+  @media screen and (min-width: 1200px) and (min-height: 900px) {
+    .title {
+      padding: 0;
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+    }
+  }
+  .btn {
+    padding: .4rem 1rem .4rem;
+    font-size: .8rem;
+  }
+}
+
+
+//
+// Featured - 2 Column slider
+//
+.slick--optionset--em-2-column-featured-slider {
+  @extend %featured--slider;
+  @extend %init--optionset;
+  .media-image {
+    height: 55vh;
+  }
+  .title {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    @media screen and (min-width: 1200px) and (min-height: 900px) {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+}

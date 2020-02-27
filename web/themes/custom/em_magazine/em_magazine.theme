@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function em_magazine_page_attachments_alter(array &$attachments) {
+  $moduleHandler = \Drupal::service('module_handler');
+
+  /**
+   * Attach color library
+   */
+  if($moduleHandler->moduleExists('color')) {
+    $attachments['#attached']['library'][] = 'em_magazine/color-library';
+  }
+
+  /*
+ * Attach Custom CSS if enabled
+ */
+  if(theme_get_setting('pd_custom_css_file')) {
+    $attachments['#attached']['library'][] = 'em_magazine/custom-css';
+  }
+}

@@ -1,0 +1,14 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+.table {
+  td.is-active {
+    background: $gray-blue-50;
+  }
+  .thead-dark a {
+    color: #FFF;
+    text-decoration: underline;
+  }
+}

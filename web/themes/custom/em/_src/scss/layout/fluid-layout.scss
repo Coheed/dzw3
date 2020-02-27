@@ -1,0 +1,17 @@
+//
+// Dependencies
+//
+@import "./../dependencies";
+
+
+//
+// Overriding header container max-width
+//
+.header {
+  .container {
+    max-width: 100%;
+    @include media-breakpoint-up(lg) {
+      max-width: 90%;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+//
+// Pager
+//
+.pager {
+  margin-top: 3rem;
+}
+
+
+//
+// Pager Items
+//
+ul.pager__items {
+  @include list-unstyled;
+  background: $gray-blue-50;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  .pager__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    white-space: nowrap;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: $gray-blue-500;
+      &:hover {
+        color: $gray-blue-900;
+      }
+    }
+  }
+
+  // Active Item
+  //
+  li.is-active a {
+    background: #FFF;
+    color: $gray-blue-900;
+    font-weight: bold;
+  }
+
+  // Previous & Next Buttons
+  //
+  li.pager__item--first,
+  li.pager__item--previous,
+  li.pager__item--next,
+  li.pager__item--last {
+    a {
+      width: auto;
+      padding: 0 15px;
+      border-radius: 0;
+    }
+  }
+}
+
+
+//
+// Infinite Scroll
+//
+ul[data-drupal-views-infinite-scroll-pager] {
+  @include list-unstyled;
+  border-top: 10px solid $gray-blue-50;
+  padding: 1.5rem 1rem;
+  li {
+    text-align: center;
+    a {
+      padding: .7rem 4rem;
+    }
+  }
+}

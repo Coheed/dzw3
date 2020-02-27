@@ -1,0 +1,59 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+//
+// Authenticated User - Dashboard
+//
+.path-user {
+  .form-type-managed-file {
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 2rem;
+    border-bottom: 5px solid $gray-blue-50;
+  }
+  .focal-point-preview-link {
+    display: none;
+  }
+  .image-widget {
+    display: flex;
+    align-items: center;
+    .image-preview {
+      margin-right: 1rem;
+    }
+  }
+}
+
+
+//
+// Edit profile page
+//
+.user-logged-in .user-form {
+  margin: auto;
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+
+  // Horizontal tabs
+  //
+  .horizontal-tabs {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    border: none;
+    .horizontal-tabs-pane {
+      padding: 0;
+    }
+    ul.horizontal-tabs-list {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $gray-blue-600;
+      li {
+        flex: 1 0 auto;
+        text-align: center;
+      }
+      .horizontal-tab-button {
+        font-size: .778rem;
+      }
+    }
+  }
+}

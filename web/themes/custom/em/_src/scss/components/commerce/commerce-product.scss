@@ -1,0 +1,79 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Produuct Summary
+//
+.product-summary-wrapper {
+  .field--name-title {
+     margin-bottom: .5rem;
+     font-size: 1.333rem;
+     font-weight: 300;
+   }
+  .field--name-price {
+    margin-bottom: .5rem;
+    color: #000;
+    font-size: 3.5rem;
+    font-weight: 300;
+  }
+  .field--name-field-summary {
+    margin-bottom: 2rem;
+  }
+
+  // Add to cart an variation
+  //
+  .field--name-variations {
+    .form-submit {
+      display: block;
+    }
+  }
+
+  // Add to cart + Quantity
+  //
+  form.commerce-order-item-add-to-cart-form {
+    display: flex;
+    align-items: stretch;
+    input {
+      padding-top: .8rem;
+      padding-bottom: .8rem;
+    }
+
+    // Quantity field
+    //
+    .field--name-quantity {
+      flex: 0 0 80px;
+      margin-right: 1rem;
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 100px;
+      }
+      label {
+        display: none;
+      }
+    }
+
+    // Add to cart button
+    //
+    .form-actions {
+      flex: 1;
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  // Category
+  //
+  .field--name-field-category {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $gray-blue-100;
+  }
+  .field--name-field-summary,
+  .field--name-body,
+  .field--name-field-additional-informations {
+    color: $gray-blue-600;
+  }
+}

@@ -1,0 +1,24 @@
+{#
+/**
+* @file
+* Default theme implementation of the Superfish menus.
+*
+* Available variables:
+* - id: Unique menu identifier.
+* - menu_classes: Menu classes.
+* - menu_items: Menu tree.
+*
+* @see template_preprocess_superfish()
+*
+* @ingroup themeable
+*/
+#}
+<nav id="menu-main-navigation" class="region-full-content">
+  <button id="menu-open-btn" class="icon icon-menu" type="button"><span class="label-menu">Menü</span></button>    <div class="container-content region-fixed-content">
+    <div class="logo" data-internal-url="{{ url('<front>') }}">
+      <img src="themes/infinite_theme/images/dzw.png" alt="Startseite">
+    </div>
+    <ul id="{{ id }}" class="{{ menu_classes }}">
+      {{ menu_items }}
+    </ul>    </div>   <button id="search-open-btn" class="icon icon-search" type="button"></button>
+</nav>

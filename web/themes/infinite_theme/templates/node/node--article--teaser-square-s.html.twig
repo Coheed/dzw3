@@ -1,0 +1,47 @@
+{% set wrapper_classes = [
+    'teaser',
+    'teaser-square-small',
+    'swipeable__item',
+    'contextual-region',
+] %}
+{% set attributes = attributes.setAttribute('data-nid', nid) %}
+{% set attributes = attributes.setAttribute('data-internal-url', url) %}
+<article{{ attributes.addClass(wrapper_classes) }}>
+    <div class="img-container" itemscope="" itemtype="http://schema.org/imageObject">
+        {% block teaser_img_container %}
+            {{ content.field_teaser_media }}
+        {% endblock %}
+    </div>
+    {% block channel %}
+        <span class="article-card-taxonomy-container">
+                         <div class="channel">
+                             {{ content.field_channel }}
+                         </div>
+                       </span>
+    {% endblock %}
+    <div class="caption caption-teaser">
+        {% block teaser_caption_channel %}{% endblock %}
+
+        {% block sponsored %}
+            {% include '@infinite/node/twig-block-sponsored.html.twig' %}
+        {% endblock %}
+        {% block roofline %}
+            <h3 class="roofline">
+                <a href="{{ url }}" target="_self">{{ content.field_roofline }}</a>
+            </h3>
+        {% endblock %}
+        {% block teaser_text_headline %}
+            <h2 class="text-headline">
+                <a href="{{ url }}" target="_self">{{ label }}</a>
+            </h2>      
+            {% if node.field_advertorial.value != "0" %}
+            <div class="identifier">
+                Anzeige
+            </div>
+        {% endif %}
+        {% endblock %}
+    </div>
+    {% if (show_contextual_links) %}
+        {{ title_suffix.contextual_links }}
+    {% endif %}
+</article>

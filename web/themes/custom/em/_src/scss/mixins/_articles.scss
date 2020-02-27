@@ -1,0 +1,243 @@
+// ========================================
+// Field style for teaser article view
+// ========================================
+
+//@mixin teaser-field--name-field-media-teaser {
+//  overflow: hidden;
+//  img {
+//    width: 100%;
+//    height: auto;
+//  }
+//  &:before {
+//    content: '';
+//    position: absolute;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//    top: 0;
+//    opacity: 0;
+//    transition: opacity .2s ease-in-out;
+//  }
+//}
+
+//@mixin teaser-links {
+//  color: $teaser-link-color;
+//  text-decoration: none;
+//  transition: all .2s ease-in-out;
+//  &:hover {
+//    color: $teaser-link-hover-color;
+//  }
+//}
+
+// Teaser category field
+//@mixin teaser-field--name-field-channel {
+//  background: $teaser-category-bg;
+//  display: inline-block;
+//  padding: 3px 10px;
+//  color: $teaser-category-color;
+//  font-family: $teaser-category-font;
+//  font-size: 11px;
+//  position: absolute;
+//  left: 0;
+//  bottom: 0;
+//  a {
+//    color: $teaser-category-color;
+//    transition: all .2s ease-in-out;
+//    &:hover {
+//      opacity: .7;
+//    }
+//  }
+//  @include media-breakpoint-up(md) {
+//    padding: 5px 1rem;
+//    font-size: .875rem;
+//    left: 1.667rem;
+//  }
+//  @include media-breakpoint-up(lg) {
+//    font-size: .778rem;
+//  }
+//}
+
+// Teaser authored info
+//@mixin teaser-authored-info {
+//  margin: .5rem 0 .8rem;
+//  color: $gray-blue-900;
+//  font-size: 11px;
+//  font-weight: bold;
+//  text-transform: uppercase;
+//  a {
+//    color: rgba($gray-blue-900, .6);
+//    text-decoration: underline;
+//    &:hover {
+//      text-decoration: none;
+//    }
+//  }
+//}
+
+// teaser title
+//@mixin teaser-title {
+//  margin-bottom: 0;
+//  font-family: $teaser-title-font;
+//  font-size: 1.25rem;
+//  line-height: 1.62rem;
+//  text-transform: uppercase;
+//}
+
+// Teaser summary
+//@mixin teaser-field--name-field-teaser-text {
+//  color: $teaser-summary-color;
+//  @include media-breakpoint-up(lg) {
+//    font-size: 0.889rem;
+//  }
+//}
+
+// Teaser read more link
+//@mixin teaser-read-more {
+//  display: inline-block;
+//  vertical-align: middle;
+//  margin-top: 1.2rem;
+//  font-family: $teaser-more-link-font;
+//  font-size: 11px;
+//  text-transform: uppercase;
+//  font-weight: 500;
+//}
+
+
+// ========================================
+// Field style for full article view
+// ========================================
+
+
+// Channel
+// ----------------
+@mixin article__full-view--channel() {
+  color: $gray-blue-900;
+  padding-left: .5rem;
+  border-left: 5px solid $theme-primary-color;
+  font-family: $theme-secondary-font;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1rem;
+  a {
+    color: $gray-blue-900;
+    text-decoration: none;
+    transition: opacity .2s ease-in-out;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+
+// Page Title
+// ----------------
+@mixin article__full-view--big-title() {
+  margin: 0;
+  font-size: 2.2rem;
+  @include media-breakpoint-up(lg) {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  @media screen and (min-width: 1200px) and (min-height: 900px) {
+    font-size: 3.3rem;
+    line-height: 3.3rem;
+  }
+}
+
+// Title bottom separator
+//@mixin article__full-view--title-separator()  {
+//  &:after {
+//    content: "";
+//    display: block;
+//    width: 30%;
+//    min-height: 1px;
+//    margin: 1.4rem 0;
+//    border-top: 5px dotted #FFF;
+//    @include media-breakpoint-up(md) {
+//      width: 20%;
+//    }
+//  }
+//}
+
+// Field Tags
+// ----------------
+@mixin article__full-view--tags() {
+  margin: 1rem 0 0;
+  padding: 1rem 0 0;
+  color: $gray;
+  font-size: .7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  a {
+    color: $gray-900;
+  }
+  .field__items {
+    display: flex;
+  }
+  .field__item {
+    margin: 0 .5rem;
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f292";
+      margin-right: 5px;
+      color: $gray-900;
+    }
+  }
+}
+
+
+
+// ========================================
+// Article Typography & Elements
+// ========================================
+
+@mixin paragraph__type-text() {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  @include media-breakpoint-up(md) {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: $article-font-size;
+    line-height: $article-line-height;
+  }
+  >h1, >h2, >h3, >h4, >h5, >h6 {
+    margin: 2.2rem 0 .8rem;
+    font-weight: 500;
+    line-height: 1.24;
+  }
+  p {
+    margin: $article-p-tag-margin;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  p.dropcaps {
+    &:first-letter {
+      display: block;
+      float: left;
+      padding: 15px 10px 10px 0;
+      font-family: $theme-secondary-font;
+      font-size: 4rem;
+      font-weight: 500;
+    }
+  }
+  a {
+    color: $article-link-color;
+    text-decoration: $article-link-decoration;
+    &:hover {
+      color: $article-link-hover-color;
+      text-decoration: $article-link-hover-decoration;
+    }
+  }
+  .lead {
+    font-size: $article-lead-font-size;
+    line-height: $article-lead-line-height;
+  }
+  hr {
+    width: 45%;
+    margin: 2rem auto;
+    border-top: 4px dotted $purple-200;
+  }
+}

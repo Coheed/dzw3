@@ -1,0 +1,40 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Author info
+//
+.view-authored-informations {
+  display: flex;
+  align-items: center;
+  font-family: $theme-secondary-font;
+  color: rgba($gray-blue-900, .5);
+  font-size: .8rem;
+  text-transform: uppercase;
+  a {
+    color: $gray-blue-900;
+    font-weight: bold;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .author-picture {
+    width: 30px;
+    @include media-breakpoint-up(lg) {
+      width: 40px;
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+  .attachment-after {
+    margin-left: .4rem;
+  }
+  .contextual {
+    display: none;
+  }
+}

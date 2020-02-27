@@ -1,0 +1,72 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Block
+//
+.block-system-main-block .block {
+  margin-bottom: 3rem;
+}
+
+
+//
+// Blocks in the main content region
+//
+.block {
+  .block-title-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-top: 14px;
+    &:after {
+      content: "";
+      flex: 1 1 auto;
+      display: block;
+      width: 100%;
+      border-top: 10px solid $gray-blue-50;
+    }
+  }
+  .block-title {
+    flex: 1 0 auto;
+    margin: 0 10px 0 0;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 12px;
+    text-transform: uppercase;
+    position: relative;
+  }
+}
+
+
+//
+// Block in the right sidebar region
+//
+.sidebar .block {
+  margin: 0 0 3rem 1.5rem;
+  color: $gray-600;
+  font-size: 1rem;
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    font-size: 0.89rem;
+  }
+}
+
+
+//
+// Advertisement Block
+//
+.block-advertisement {
+  //background-color: $gray-50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //padding: 1.8rem 0;
+  //.sidebar & {
+  //  padding: 1rem 0;
+  //}
+}

@@ -1,0 +1,19 @@
+<?php
+
+function em_dynamic_teaser_entity_view_mode_alter(&$view_mode, Drupal\Core\Entity\EntityInterface $entity, $context) {
+
+  if ($entity->getEntityTypeId() == 'node' && $view_mode == 'teaser') {
+    if($entity->hasField('teaser_featured') && $entity->get('teaser_featured')->getString()) {
+      $view_mode = 't2';
+    }
+    else {
+      $view_mode = 't3';
+    }
+  }
+}
+
+function _is_view_mode_exist($view_mode, $entity) {
+  $view_modes = Drupal::entityQuery('entity_view_mode')
+    ->condition('targetEntityType', $entity)
+    ->execute();
+}

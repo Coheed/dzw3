@@ -1,0 +1,21 @@
+{# Header action menu #}
+
+<ul class="header--action-menu list-unstyled mb-0 d-flex align-items-center">
+  {% if pd.modules.commerce_cart and pd.header.show_cart_button %}
+    <li class="header-cart">
+      {{ pd.block.commerce_cart }}
+    </li>
+  {% endif %}
+  {% if pd.modules.search and pd.header.show_search_button %}
+    <li class="header-search">
+      <button class="js-toggle-search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    </li>
+  {% endif %}
+  <li class="header-menu {% if not pd.header.show_hamburger_menu %} d-block d-lg-none {% endif  %}">
+    <button class="toggle-sidebar js-toggle-sidebar">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+  </li>
+</ul>

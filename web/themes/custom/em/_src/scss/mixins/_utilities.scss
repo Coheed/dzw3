@@ -1,0 +1,22 @@
+@mixin full-width() {
+  margin-left: -9999rem;
+  margin-right: -9999rem;
+  padding-left: 9999rem;
+  padding-right: 9999rem;
+  position: static;
+}
+
+@mixin make-blank-overlay($z-index: 1) {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: $z-index;
+}
+
+@mixin make-color-overlay($bg-color, $z-index: 1) {
+    @include make-blank-overlay($z-index);
+    background: $bg-color;
+}

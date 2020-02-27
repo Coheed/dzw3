@@ -1,0 +1,82 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Block Wrapper
+//
+.search-block-wrapper {
+  background-color: rgba(darken($gray-blue-900, 4%), .98);
+  display: none;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  &.active {
+    display: flex;
+  }
+  .close-block-modal {
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 1rem;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+
+//
+// Search Form
+//
+.search-block-wrapper form {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  input {
+    border: none;
+    border-radius: 0;
+  }
+  input[type="submit"] {
+    display: none;
+  }
+  .form-type-search {
+    width: 100%;
+    text-align: center;
+    &:after {
+      content: 'Enter the keyword you wish to search for and press Enter';
+      display: block;
+      margin-top: 1rem;
+      color: #FFFFFF70;
+    }
+  }
+  input[type="search"] {
+    background: transparent;
+    border-bottom: 3px solid #FFF;
+    width: 100%;
+    padding: .5rem 1rem;
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+    &::placeholder{
+      color: #FFF;
+    }
+  }
+}

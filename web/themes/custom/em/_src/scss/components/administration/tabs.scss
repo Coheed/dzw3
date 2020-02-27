@@ -1,0 +1,164 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Tabs
+//
+.tabs {
+  padding-top: $tabs-sd-height;
+  border: 1px solid $tabs-sd-bg-color;
+  border-radius: .25rem;
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+
+//
+// Primary & Secondary
+//
+ul.primary,
+ul.secondary {
+  margin: 0;
+  padding: 0;
+  font-family: $theme-secondary-font;
+  list-style: none;
+}
+
+.btn-tabs-toggler {
+  background-color: $tabs-sd-bg-color;
+  display: block;
+  width: 100% - $tabs-sd-active-width;
+  height: $tabs-sd-height;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+
+//
+// Primary tabs
+//
+.tabs ul.primary,
+.tabs ul.secondary {
+  background-color: $tabs-sd-bg-color;
+  display: block;
+  margin-top: -1px;
+  border: 0;
+  border-radius: .25rem;
+  position: static;
+  max-height: 0;
+  overflow: hidden;
+  &.active {
+    max-height: 999rem;
+  }
+  @include media-breakpoint-up(lg) {
+    background-color: transparent;
+    display: flex;
+    max-height: none;
+    align-items: baseline;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid $gray-blue-100;
+    overflow: visible;
+  }
+  > li {
+    display: block;
+    margin: 0;
+    font-size: $small-font-size;
+    &.is-active {
+      width: $tabs-sd-active-width;
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include media-breakpoint-up(lg) {
+        width: auto;
+        position: static;
+      }
+    }
+    a {
+      display: block;
+      background: transparent;
+      height: $tabs-sd-height;
+      padding: 0 1.5rem;
+      border-top: 1px solid #FFF;
+      color: $gray-blue-600;
+      line-height: $tabs-sd-height;
+      text-decoration: none;
+      text-align: left;
+      text-transform: uppercase;
+      transition: all .2s ease-in-out;
+      @include media-breakpoint-up(lg) {
+        height: auto;
+        line-height: 1rem;
+        margin-bottom: -2px;
+        padding: .5rem 1rem;
+        border: none;
+        border-bottom: 3px solid transparent;
+        text-align: center;
+      }
+      &:hover {
+        color: $gray-blue-900;
+        border-bottom-color: $gray-blue-900;
+      }
+    }
+    &.is-active a {
+      color: #000;
+      font-weight: bold;
+      border-top: none;
+      @include media-breakpoint-up(lg) {
+        border-bottom-color: $gray-blue-900;
+      }
+    }
+  }
+}
+
+
+//
+// Tabs Region
+//
+.region-tabs,
+.block-region-tabs {
+  position: relative;
+  .tabs {
+    @include full-width;
+    border-left: none;
+    border-top: none;
+    position: static;
+  }
+  .tabs ul.primary,
+  .tabs ul.secondary {
+    @include full-width;
+    justify-content: center;
+    @include media-breakpoint-up(lg) {
+    }
+    > li {
+      flex: 1;
+      white-space: nowrap;
+    }
+    > li a {
+      padding: 0;
+      @include media-breakpoint-up(lg) {
+        padding: .7rem 1.5rem;
+      }
+    }
+  }
+  .tabs ul.secondary {
+    background-color: transparent;
+    li a {
+      padding: 1rem 1.5rem;
+      text-transform: none;
+      border-bottom: none;
+    }
+  }
+}

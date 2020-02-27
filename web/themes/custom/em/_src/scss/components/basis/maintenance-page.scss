@@ -1,0 +1,15 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+.maintenance-wrapper {
+  padding: 3rem 2rem;
+  border: 1px solid $gray-300;
+  h1 {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray-300;
+  }
+}

@@ -1,0 +1,9 @@
+{% set classes = [
+    'item-block',
+    'item-' ~ paragraph.bundle|clean_class,
+] %}
+<div{{ attributes.addClass(classes) }}>
+    <span class="fa fa-file-pdf">
+    </span>
+    {{ content }}
+</div>

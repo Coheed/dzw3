@@ -1,0 +1,27 @@
+{% extends "@infinite/node/node--article--teaser-default.html.twig" %}
+
+{% set attributes = attributes.addClass('teaser-content-right', 'teaser-square-medium') %}
+
+{% block teaser_text %}
+    <div class="teaser_text">
+        {% set text = content.field_teaser_text|render|striptags %}
+        {{ text|length > 200 ? text|slice(0, 200) ~ ' ...' : text }}
+    </div> <!-- mzu todo: no time for a documentation uargh -->
+{% endblock %}
+{% block roofline %}
+    <h3 class="roofline">
+        <a href="{{ url }}" target="_self">{{ content.field_roofline }}</a>
+    </h3>
+{% endblock %}
+{% block teaser_author %}
+    <div class="item-author">
+        <div class="caption">
+            <div class="text_author">
+                <span class="author_name">{{ author_name }} </span>
+                <span class="date">  {% if datetime and timestamp %}/ {{ timestamp|date("d.m.Y", 'Europe/Berlin') }} {% endif %}</span>
+                <!-- <time class="text-timestamp" itemprop="date" datetime="{{ datetime }}" title="">{{ timestamp|date("d m Y") }}</time> -->
+                <!--  <div class="text-timestamp">{{ timestamp|date("d.m.Y", 'Europe/Berlin') }}</div> -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

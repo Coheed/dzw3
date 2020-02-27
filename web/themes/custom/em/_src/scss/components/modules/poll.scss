@@ -1,0 +1,136 @@
+//
+// Poll
+//
+
+
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+// Poll block
+//
+.block--poll {
+  background: transparent;
+  border: 1px solid $gray-blue-50;
+  color: $gray-blue-900;
+  padding: 2rem;
+
+  .block-title-wrapper {
+    margin-bottom: .5rem;
+    text-align: left;
+    .block-title {
+      background: transparent;
+      padding: 0 .1rem;
+      color: $gray-blue-500;
+      font-size: .8889rem;
+      font-weight: normal;
+    }
+    &:before, &:after {
+      display: none;
+    }
+  }
+  .form-actions {
+    margin-bottom: 0;
+  }
+  input[type="submit"] {
+    background-color: $theme-primary-color;
+    border-color: $theme-primary-color;
+    width: 100%;
+    margin-top: .25rem;
+    color: #FFF;
+  }
+}
+
+
+// Poll
+//
+
+
+.poll__question {
+  line-height: 1.1;
+  letter-spacing: -.1rem;
+}
+
+.poll__choice__title {
+  font-weight: bold;
+}
+
+.poll__total {
+  font-size: .778rem;
+  color: $gray-blue-300;
+}
+
+// Poll Vote
+//
+
+.poll--vote {
+  .poll__choice__title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .poll__choice {
+    .form-actions {
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+  #edit-result {
+    background: transparent;
+    border-color: $gray-blue-300;
+    color: $gray-blue-900;
+    text-shadow: none;
+  }
+}
+
+// Poll Results
+//
+.poll__result {
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.poll--results {
+  .poll__question {
+    margin-bottom: 1.2rem;
+  }
+  .poll__choice {
+    display: flex;
+    margin-bottom: .5rem;
+    > * {
+      margin-right: .5rem;
+    }
+  }
+}
+
+.poll__choice__percent {
+  color: $theme-primary-color;
+  font-family: $headings-font-family;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.poll__choice__votes {
+  margin-top: .2rem;
+  font-size: .7rem;
+  color: $gray-blue-300;
+}
+
+
+.poll {
+  input[type="submit"].button {
+    padding: .5rem 1.2rem;
+    line-height: 1;
+  }
+  input[type="radio"] {
+    margin: 1px;
+  }
+  .bar {
+    background-color: $gray-blue-50;
+    height: 10px;
+    .foreground {
+      background-color: $theme-primary-color;
+      height: 10px;
+    }
+  }
+}

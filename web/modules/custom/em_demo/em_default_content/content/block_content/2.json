@@ -1,0 +1,95 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/em.local\/block\/2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "7ba6c257-0ef4-4a6a-9a06-9e2e0d037790"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 2
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2018-02-09T14:46:17+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "About EM",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-05-04T14:40:38+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| EM Magazine",
+                "canonical_url": "http:\/\/em.local\/combo\/6"
+            }
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"small\">A premium Drupal 8 theme with an outstanding design that will perfectly suit any blogs, magazines or other publishing websites. A theme with a mobile first design will make your website looks gorgeous on any device, from cell phones to tablets to laptops and computers.<\/p>\r\n\r\n<p class=\"small\">Em is packed with awesome features that will help you create an amazing content on your site. Also the theme utilize the new Drupal in core Media module that will give you ability to reuse all your previously uploaded media files such as images, hosted and embedded videos, tweets, etc.<\/p>",
+            "format": "full_html",
+            "processed": "<p class=\"small\">A premium Drupal 8 theme with an outstanding design that will perfectly suit any blogs, magazines or other publishing websites. A theme with a mobile first design will make your website looks gorgeous on any device, from cell phones to tablets to laptops and computers.<\/p>\n\n<p class=\"small\">Em is packed with awesome features that will help you create an amazing content on your site. Also the theme utilize the new Drupal in core Media module that will give you ability to reuse all your previously uploaded media files such as images, hosted and embedded videos, tweets, etc.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

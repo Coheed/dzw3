@@ -1,0 +1,17 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+//
+// Label Inline Field
+//
+.field--label-inline {
+  display: flex;
+  .field__label {
+    margin-right: .5rem;
+    &:after {
+      content: ':';
+    }
+  }
+}

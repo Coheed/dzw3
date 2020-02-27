@@ -1,0 +1,99 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a post layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if content %}
+  <div{{ attributes }}>
+
+    {# == Content top == #}
+    {# ================= #}
+
+    {% block content_top %}
+      {% if content.top %}
+        <div class="content-top-wrapper">
+          <div class="container">
+            <div class="row">
+              <section{{ region_attributes.top.addClass('col-12') }}>
+                {{ content.top }}
+              </section>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endblock %}
+
+
+    {# == Article content == #}
+    {# ====================== #}
+
+    {% block article %}
+      <article>
+        <div class="article-content-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-8 mx-lg-auto">
+
+                {% block article_header %}
+                  <div{{ region_attributes.article_header }}>
+                    {{ content.article_header }}
+                  </div>
+                {% endblock %}
+
+                {% block article_content %}
+                  {% if content.article_content %}
+                    <div{{ region_attributes.article_content }}>
+                      {{ content.article_content }}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+
+                {% block article_comments %}
+                  {% if content.article_comments %}
+                    <div{{ region_attributes.article_comments }} >
+                      {{ content.article_comments }}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+              </div>
+
+              <aside class="sidebar col-12 col-lg-4 mt-5 mt-lg-0 js-sticky-elements">
+                <div{{ region_attributes.right_sidebar }}>
+                  {{ content.right_sidebar }}
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endblock %}
+
+
+  {# == Content bottom == #}
+  {# ==================== #}
+
+  {% block content_bottom %}
+    {% if content.bottom %}
+      <div class="content-bottom-wrapper">
+        <div class="container">
+          <div class="row">
+            <section{{ region_attributes.bottom.addClass('col-12') }}>
+              {{ content.bottom }}
+            </section>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
+
+
+  </div>
+{% endif %}

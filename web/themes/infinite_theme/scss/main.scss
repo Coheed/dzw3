@@ -1,0 +1,976 @@
+//<editor-fold desc="ToDo">
+//Allgemein - lineheight - color - font-weight - font - mizu
+// Font des Teaser_Texts wird nicht gerendert/ausgegeben - mizu
+// font mixins mit if abfrage
+// FIREFOX HACK -> CHANNEL MIXIN   oder anders rum
+//</editor-fold>
+//<editor-fold desc="Imports">
+//</editor-fold>
+//<editor-fold desc="Breakpoint Variables">
+//xxs - Media query for infinite.xxs is "all and (min-width: 0px)"
+$xxs: 0px;
+$xs: 480px;
+$sm: 767px;
+$md: 992px;
+$lg: 1128px;
+$xl: 1450px;
+$xxl: 1800px;
+//</editor-fold>
+//<editor-fold desc="Variables">
+$magenta: #ec008c;
+$text_color: #69656e;
+$headline-size-h2: #69656e;
+$article_headline_color: #69656e;
+$gray: #7f7f7f;
+$blue: #1e2d66;
+$advertorial: #008cec;
+$strong: #333333;
+//</editor-fold>
+//<editor-fold desc="Fonts">
+//set to default - infinite-global.css
+strong, b {
+  font-family: MuseoSans700;
+  //font-weight:700;
+}
+
+@font-face {
+  font-family: TheAntiquaB_400;
+  src: url("../fonts/TheAntiquaB/TheAntiquaB_LT_400.eot");
+  src: url("../fonts/TheAntiquaB/TheAntiquaB_LT_400.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/TheAntiquaB/TheAntiquaB_LT_400.woff") format("woff"),
+  url("../fonts/TheAntiquaB/TheAntiquaB_LT_400.svg#TheAntiquaB_LT_400") format("svg");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TheAntiquaB_700;
+  src: url("../fonts/TheAntiquaB/TheAntiquaB_LT_700.eot");
+  src: url("../fonts/TheAntiquaB/TheAntiquaB_LT_700.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/TheAntiquaB/TheAntiquaB_LT_700.woff") format("woff"),
+  url("../fonts/TheAntiquaB/TheAntiquaB_LT_700.svg#TheAntiquaB_LT_700") format("svg");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MuseoSans300;
+  src: url("../fonts/MuseoSans/MuseoSans_300Web.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: MuseoSans500;
+  src: url("../fonts/MuseoSans/MuseoSans_500Web.woff") format("woff");
+  font-weight: 500;
+
+}
+
+@font-face {
+  font-family: MuseoSans700;
+  src: url("../fonts/MuseoSans/MuseoSans_700Web.woff") format("woff");
+  font-weight: 700;
+}
+
+//</editor-fold>
+//<editor-fold desc="Mixins">
+@mixin bp($break, $viewport:null) {
+  @if $break == xss {
+    @media (max-width: $xss) {
+      @content;
+    }
+  } @else if $break == xs {
+    @media (min-width: $xxs+1) and (max-width: $xs) {
+      @content;
+    }
+  } @else if $break == sm {
+    @media (min-width: $xs+1) and (max-width: $sm) {
+      @content;
+    }
+  } @else if $break == md {
+    @media (min-width: $sm+1) and (max-width: $md) {
+      @content;
+    }
+  } @else if $break == lg {
+    @media (min-width: $md+1) and (max-width: $lg) {
+      @content;
+    }
+  } @else if $break == xl {
+    @media (min-width: $lg+1) and (max-width: $xl) {
+      @content;
+    }
+  } @else if $break == xxl {
+    @media (min-width: $xxl) {
+      @content;
+    }
+  }
+}
+
+//<editor-fold desc="MIXIN - Font">
+@mixin font($font-family,$font-size:inherit,$font-weight:inherit,$color:inherit) {
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  @if ($font-family == 'ms300') {
+    font-family: MuseoSans300, sans-serif !important;
+  } @else if ($font-family == 'ms500') {
+    font-family: MuseoSans500, sans-serif !important;
+  } @else if ($font-family == 'ms700') {
+    font-family: MuseoSans700, sans-serif !important;
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="MIXIN - Roofline - .roofline">
+@mixin roofline($padding:0 0 0 0,$margin:0 0 0 0) {
+  .roofline {
+    color: $magenta;
+    font-family: MuseoSans700, sans-serif;
+    padding: $padding;
+    margin: $margin;
+  }
+}
+
+//</editor-fold>
+// <editor-fold desc="MIXIN - Author - .text_author">
+@mixin author() {
+  .text_author {
+    margin: 10px 0 0 0;
+    .author_name {
+      color: $blue;
+    }
+    .date {
+      color: $text_color;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="MIXIN - Channel Flag - .channel">
+@mixin channel($top:auto,$position:relative,$margin:-10px 0 0 0) {
+  .channel {
+    margin: $margin;
+    top: $top;
+    position: $position;
+    .text-label.text-category {
+      margin: 0;
+      @include font(ms500, 18px, 500, white);
+      height: 25px;
+      background: $magenta;
+      text-align: center;
+      color: #ffffff;
+      padding: 4px 10px 0;
+      display: inline-block;
+      position: relative;
+      &:after {
+        top: 0;
+        content: "";
+        position: absolute;
+        border-top: solid 25px $magenta;
+        right: -10px;
+        border-right: solid 10px transparent;
+      }
+    }
+  }
+}
+
+//</editor-fold>
+
+//</editor-fold>
+//<editor-fold desc="Superfish Navigation">
+nav#menu-main-navigation .container-content .logo {
+  opacity: 1;
+  visibility: visible;
+  margin-right: 110px;
+  overflow: visible;
+}
+
+//</editor-fold>
+//<editor-fold desc="Presenter-Front">
+.page-front {
+  article.teaser-landscape-medium.teaser-presenter-half {
+    padding-top: 0 !important;
+    padding-bottom: 100px;
+    .teaser_text {
+      @include font(ms700, 16px, 700, $text_color);
+      line-height: 1.2;
+      margin-top: 10px;
+    }
+    h1.text-headline {
+      @include font(ms700, 24px, 700, $text_color);
+      a:hover {
+        color: $gray
+      }
+    }
+    h3.roofline {
+      @include font(ms700, 18px, 700, $gray);
+    }
+    .caption.caption-teaser {
+      @include roofline(10px 0 0 0);
+      .text-label.text-category {
+        @include font(ms500, 18px, 500, white);
+        margin: 0;
+        height: 25px;
+        background: $magenta;
+        text-align: center;
+        padding: 5px 10px 0;
+        display: inline-block;
+        position: relative;
+        &:after {
+          top: 0;
+          content: "";
+          position: absolute;
+          border-top: solid 25px $magenta;
+          right: -10px;
+          border-right: solid 10px transparent;
+        }
+      }
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="FourTeaser">
+.region__teasers--horizontal {
+  overflow: visible;
+  .list__images--horizontal {
+    .teaser-square-small {
+      @include roofline();
+      .roofline {
+        font-size: 14px;
+      }
+      &:nth-of-type(-n+3) {
+        border-right: 1px solid #e8e4e4;
+      }
+      @include channel(-10px, absolute, 0 0 0 0);
+      .caption-teaser {
+        margin-top: 18px;
+        h2.text-headline {
+          @include font(ms700, 15px, 700, $text_color);
+        }
+      }
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Three+One Teaser">
+#threeteaser {
+  .region__teasers--horizontal {
+    .swiper-container-horizontal {
+      overflow: visible;
+      .container-content {
+        .teaser-square-small {
+          @include roofline();
+          .roofline {
+            font-size: 14px;
+          }
+          &:nth-of-type(-n+3) {
+            border-right: 1px solid #e8e4e4;
+          }
+          @include channel(-10px, absolute, 0 0 0 0);
+          .caption-teaser {
+            margin-top: 18px;
+            h2.text-headline {
+              @include font(ms700, 15px, 700, $text_color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="News-Roll - inclusive TeaserFormate">
+.page-front {
+  .region-infinite-block {
+    .region-teaser-list {
+      .container-content {
+        .teaser-list-vertical {
+          overflow: visible !important; /* mizu - could be overwriting other elements -- unlikely */
+          article {
+            //default font sizes
+            .text_author {
+              @include font(ms700, 16px, 700);
+            }
+            h3.roofline {
+              @include font(ms700, 14px, 700);
+            }
+            h2.text-headline {
+              @include font(ms700, 24px, 700);
+            }
+            .teaser_text {
+              @include font(ms500, 18px);
+            }
+            //<editor-fold desc="Landscape Medium">
+            &.teaser-landscape-medium {
+              .article-card-taxonomy-container {
+                position: absolute;
+                margin: 0 0 0 0;
+                left: 0;
+                @include channel(auto, relative, -10px 0 0 12px);
+                .channel {
+                  @supports (-webkit-appearance:none) {
+                    margin-left: 0;
+                  }
+                }
+              }
+              .caption.caption-teaser {
+                @include roofline;
+                h2.text-headline {
+                  color: $headline-size-h2;
+                  line-height: 1.3;
+                }
+                .teaser_text {
+                  padding: 15px 0 0 0;
+                  line-height: 1.2;
+                }
+                @include author;
+              }
+            }
+            //</editor-fold>
+            //<editor-fold desc="Landscape Large">
+            &.teaser-landscape-large {
+              .article-card-taxonomy-container {
+                left: 0;
+                top: 32px;
+                @include channel(25px, absolute, 0 0 0 0);
+
+              }
+              .caption.caption-teaser {
+                @include roofline;
+                h2.text-headline {
+                  color: $headline-size-h2;
+                  line-height: 1.3;
+                }
+                .teaser_text {
+                  padding: 15px 0 0 0;
+                  line-height: 1.2;
+                }
+                @include author;
+              }
+            }
+            //</editor-fold>
+            //<editor-fold desc="Portrait Small">
+            &.teaser-portrait-small {
+              .article-card-taxonomy-container {
+                position: absolute;
+                margin: 0 0 0 0;
+                left: 0;
+                @include channel(auto, relative, -10px 0 0 12px);
+                .channel {
+                  @supports (-webkit-appearance:none) {
+                    margin-left: 0;
+                  }
+                }
+              }
+              .caption.caption-teaser {
+                @include roofline;
+                h2.text-headline {
+                  color: $headline-size-h2;
+                  line-height: 1.3;
+                }
+                .teaser_text {
+                  padding: 15px 0 0 0;
+                  line-height: 1.2;
+                }
+                @include author;
+              }
+            }
+            //</editor-fold>
+            //<editor-fold desc="Portrait Medium">
+            &.teaser-portrait-medium {
+              .article-card-taxonomy-container {
+                position: absolute;
+                margin: 0 0 0 0;
+                left: 0;
+                @include channel(auto, relative, -10px 0 0 12px);
+                .channel {
+                  @supports (-webkit-appearance:none) {
+                    margin-left: 0;
+                  }
+                }
+              }
+              .caption.caption-teaser {
+                @include roofline;
+                h2.text-headline {
+                  color: $headline-size-h2;
+                  line-height: 1.3;
+                }
+                .teaser_text {
+                  padding: 15px 0 0 0;
+                  line-height: 1.2;
+                }
+                @include author;
+              }
+            }
+            //</editor-fold>
+            //<editor-fold desc="Square Medium">
+            &.teaser-square-medium {
+              .article-card-taxonomy-container {
+                position: absolute;
+                margin: 0 0 0 0;
+                left: 0;
+                @include channel(auto, relative, -10px 0 0 12px);
+                .channel {
+                  @supports (-webkit-appearance:none) {
+                    margin-left: 0 !important;
+                  }
+                }
+              }
+              .caption.caption-teaser {
+                @include roofline;
+                h2.text-headline {
+                  color: $headline-size-h2;
+                  line-height: 1.3;
+                }
+                .teaser_text {
+                  padding: 15px 0 0 0;
+                  line-height: 1.2;
+                }
+                @include author;
+              }
+            }
+            //</editor-fold>
+          }
+        }
+      }
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="id-header">
+#header{ //todo - mzu - add dfp blocks with specific padding
+  padding-bottom:30px;
+}
+//</editor-fold>
+//<editor-fold desc="Preheader -- mizu im backend ändern falls möglich">
+#header-home {
+  display: none;
+  .logo {
+    display: none;
+  }
+  .socials-bar {
+    display: none;
+  }
+}
+
+.preheader {
+  background: #1e2d66;
+  color: white;
+  height: 40px;
+  .container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1128px;
+    line-height: 39px;
+    height: 40px;
+    .social-links {
+      display: flex;
+      list-style: outside none none;
+    }
+    .site-slogan {
+      float: left;
+      width: 33.33%;
+      box-sizing: border-box;
+      flex: 1 1 33.33%;
+    }
+    li {
+      width: 7%;
+      text-align: center;
+      border-left: 1px solid #8c9a9d;
+    }
+    li:nth-child(8) {
+      width: 7%;
+      text-align: center;
+      border-right: 1px solid #8c9a9d;
+    }
+    .abo {
+      width: 7%;
+    }
+    .newsletter {
+      width: 12%;
+    }
+  }
+}
+
+@media(max-width: 479px) {
+  .preheader {
+    display: none;
+  }
+}
+
+.toolbar-tray-open {
+  padding-top: 80px;
+}
+
+//</editor-fold>
+//<editor-fold desc="Pager">
+.pager {
+  display: flex;
+  justify-content: center;
+  .pager__items {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    .pager__item {
+      border-radius: 1em;
+      border: none;
+      background-color: #ec008c;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      color: white;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Article_Link">
+.page-article {
+  .item-link {
+    flex-direction: row;
+    align-items: left;
+    flex-wrap: wrap;
+    min-width: 320px;
+    max-width: 500px;
+    .item-media {
+      background-color: #0c5c7f;
+      width: 150px;
+
+    }
+    a {
+      vertical-align: top;
+    }
+    .socials-bar {
+      display: none;
+    }
+  }
+  .item-link {
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 600px;
+    img {
+      width: 200px;
+      height: auto;
+      flex: 1;
+    }
+    a {
+      flex: 0 0 100%;
+      text-align: center;
+      margin-left: 10px;
+    }
+    p {
+      flex: 3;
+      align-self: center;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="ADREGIONS STUFF - SCRATCHFILE">
+.halfpager {
+
+}
+
+.mediumrectangle {
+  //margin-top: 30px;
+}
+
+#js-dfp-tag-billboard {
+  padding-top: 31px;
+  margin-top: 32px;
+}
+
+.lbtop {
+  display: flex;
+  max-width: 1448px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  #js-dfp-tag-leaderboard_top {
+    margin: 0 auto;
+  }
+}
+
+.add-presenter-half-wrapper {
+  padding:30px 0 0 0; //todo - mzu - add dfp blocks with specific padding
+  max-width: 1448px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  box-sizing: border-box;
+  .wscl {
+    flex: 1;
+  }
+  .wscr {
+    flex: 1;
+  }
+  .container-fixed-content {
+    flex: 9.5;
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="ARTICLE PAGE - FULL - inc. Fonts">
+.page-article {
+  /*
+      * H1: Museo700,sans-serif | 32px | 700
+      * .item-text: TheAntiquaB-400 | 21px |400
+      *   strong: TheAntiquaB-700 | 21px |400 (?)
+      *H4: MuseoSans700 | 1.1em | 700
+      *
+  */
+  @include roofline();
+  @include channel(auto, relative, 0 0 0 0);
+  .item-content__header h1 {
+    color: $article_headline_color;
+    @include font(ms700, 2em, 400, $article_headline_color);
+
+  }
+  .item-content-column {
+    .article_author{
+      @include font(ms300, 0.9em, 300);
+      //@mixin font($font-family,$font-size:inherit,$font-weight:inherit,$color:inherit)
+      text-transform: uppercase;
+      margin:20px 0;
+
+    }
+    .item-text {
+      color: $text_color;
+      @include font(ms500, 21px, 400, $text_color);
+    }
+    h4 {
+      @include font(ms500, 1em);
+    }
+    a {
+      text-decoration-color: $magenta;
+    }
+    a:hover {
+      color: $magenta;
+    }
+  }
+
+}
+
+//</editor-fold>
+//<editor-fold desc="Gallery-Article">
+.page-article {
+  .item-block-gallery {
+    @include font(ms300);
+    div {
+      overflow: visible !important;
+    }
+
+    .slick-arrow {
+      &:before {
+        color: $magenta;
+        font-size: 4.25rem;
+      }
+    }
+    .slick-next {
+      right: 30px;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="IMAGE-GALLERY-MEDIA : COPYRIGHT-SOURCE-DESCRIPTION">
+.text-description {
+  color: $text_color;
+  font-size: 0.8em;
+}
+
+//</editor-fold>
+//<editor-fold desc="Vita">
+.page-article {
+  .item-personen {
+    .vita {
+      display: flex;
+      flex-direction: row;
+      .item-content__header {
+        position: absolute;
+        padding: 0;
+        .title--page {
+          @include font(ms700, 1.3em);
+          color: $magenta;
+        }
+      }
+      .item-text {
+        font-size: 0.8em;
+        word-break: break-word; //mpreuten -> mizu check error
+        padding-left: 30px;
+      }
+      .item-content__content {
+        display: flex;
+        flex-direction: row;
+        picture img {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: #00bcd4;
+          background-size: cover;
+        }
+        .title--page {
+
+        }
+      }
+      @media(max-width: 489px) {
+        .item-text {
+          padding-top: 30px;
+        }
+        .item-content__content {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .caption {
+    //display: none; // mizu check
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="PDF - Paragraph">
+.page-article {
+  .item-media-pdf {
+    display: flex;
+    flex-direction: row;
+    .file {
+      align-self: center;
+      padding-left: 30px;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Related_Article">
+.page-article {
+  .description {
+    margin-top: 60px;
+    @include font(ms700, 1.3em);
+    color: $magenta;
+  }
+  .item-related-article {
+    border-top: 1px solid #e8e4e4;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    @include channel(auto, absolute, -210px 0 0 0);
+    article {
+      flex: 1;
+      padding-top: 20px;
+      padding-right: 10px;
+      .caption-teaser {
+        display: inline-block;
+      }
+    }
+  }
+  @media(max-width: 479px) {
+    .item-related-article {
+      flex-direction: column;
+    }
+    .channel {
+      padding-top: 0px;
+    }
+    .img-container {
+      width: 300px;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Advertorial">
+.identifier {
+  @include font(ms700, 1em, 700, $advertorial)
+}
+
+.page-article {
+  .identifier {
+    padding-bottom: 5px;
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Bildunterschrift - Description & Copyright">
+.page-article {
+  .item-media-image {
+    .socials.socials-bar{
+      display:none
+    }
+    .img-container {
+      padding-bottom: 58%;
+      margin-bottom: 0 !important;
+
+    }
+    .caption {
+      .text-copyright {
+        @include font(ms300, 0.9em, 300);
+      }
+      .text-description {
+        @include font(ms300, 0.9em, 300);
+        padding:0;
+      }
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Text-Copright - lowercase settings">
+.text-copyright {
+  text-transform: none;
+}
+
+//</editor-fold>
+//<editor-fold desc="Disable Pinterest">
+.icon-pinterest {
+  display: none !important;
+}
+
+//</editor-fold>
+//<editor-fold desc="Impressum_Style">
+.page-page {
+  .region-content {
+    .item-content__header {
+      .text-headline {
+        text-align: center;
+        padding-bottom: 50px;
+        padding-top: 50px;
+      }
+    }
+    .field {
+      padding-top: 35px;
+      border-top: 1px solid #e8e4e4;
+      .has {
+        padding-top: 20px;
+        border-top: 1px solid #e8e4e4;
+
+      }
+    }
+
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Menu_transparency_disabled">
+.menu {
+  li {
+    ul {
+      background: white;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Taxonomy_Fix (Channel Flag on top, styling)">
+.page-taxonomy {
+  .region__teasers--horizontal {
+    article {
+      .article-card-taxonomy-container {
+        position: initial;
+        margin: 0 0 0 0;
+        left: 0;
+      }
+      @include channel;
+    }
+  }
+  .container-row-body {
+    padding-top: 10px;
+    .article-card-taxonomy-container {
+      position: absolute;
+      margin: 0 0 0 0;
+      left: 0;
+
+      @include channel;
+    }
+    .teaser-landscape-large {
+      .channel {
+        bottom: 456px;
+        margin: -10px 0 0 0;
+      }
+    }
+    @media(max-width: 489px) {
+      .teaser-landscape-large {
+        .channel {
+          position: initial;
+        }
+      }
+      .teaser-landscape-medium {
+        .caption-teaser {
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+  @media(max-width: 489px) {
+    .region__teasers--horizontal {
+      .list__images--horizontal {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Banner top/right/left/mobile-rectangle mobile not displayed -- später in DFP ändern">
+.page-front {
+  @media(max-width: 489px) {
+    .lbtop {
+      display: none;
+    }
+    .wscr {
+      display: none;
+    }
+    .wscl {
+      display: none;
+    }
+    #js-dfp-tag-dzw_mobile_rectangle {
+      display: none;
+    }
+    .billboard {
+      display: none;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="4-Teaser Mobile Space Fix">
+.page-front {
+  @media(max-width: 489px) {
+    .container-content {
+      padding-top: 10px;
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="Channel_Flag_Fix for Landscape Large">
+.page-front {
+  .teaser-landscape-large {
+    @media(max-width: 489px) {
+      .channel {
+        margin: -10px 0 0 0 !important;
+        top: auto !important;
+        position: relative;
+      }
+    }
+  }
+}
+
+//</editor-fold>
+//<editor-fold desc="MenuLabel_Mobile_disabled">
+.page-front {
+  @media(max-width: 489px) {
+    .region-full-content {
+      .icon-menu {
+        span {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+//</editor-fold>

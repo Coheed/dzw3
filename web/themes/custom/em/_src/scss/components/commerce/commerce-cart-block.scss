@@ -1,0 +1,93 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Commerce Cart Block
+//
+.cart-block--contents {
+  background-color: $commerce-cart-block-bg-color;
+  width: 350px;
+  border-radius: .25rem;
+  box-shadow: 0 6px 10px 0 rgba(#000, .3);
+  color: #FFF;
+  right: 0;
+  @include media-breakpoint-up(md) {
+    width: 400px;
+  }
+  a {
+    color: #FFF;
+  }
+  table {
+    margin-bottom: 0;
+    font-size: $small-font-size;
+    @include media-breakpoint-up(lg) {
+      font-size: .778rem;
+    }
+    td {
+      padding: .5rem;
+      vertical-align: middle;
+      border-top-color: rgba(#FFF, .2);
+    }
+    td.views-field-field-image {  width: 90px;  }
+    td.views-field-total-price__number {  font-weight: bold;  }
+    tr:first-child td {  border-top: none;  }
+  }
+}
+
+.cart--cart-block .cart-block--contents__links a {
+  display: block;
+  padding: .75rem 1rem;
+  background: rgba(#FFF, .9);
+  border: 1px solid rgba(#FFF, .9);
+  color: $gray-blue-900;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .877rem;
+  margin-top: 5px;
+  transition: background .2s ease-in-out;
+  &:hover {
+    background: rgba(#FFF, 1);
+    color: $gray-blue-900;
+  }
+}
+
+
+//
+// Commerce Cart Block - Items
+//
+.cart-block--contents__items {
+  background-color: rgba($commerce-cart-block-bg-color, .5);
+  overflow: auto;
+}
+
+
+//
+// Commerce Cart Block - Items count
+//
+a.cart-block--link__expand {
+  padding: 0 1rem;
+  position: relative;
+  border-radius: .25rem .25rem 0 0;
+  &.cart-block--link-active {
+    background-color: $commerce-cart-block-bg-color;
+    color: #FFF;
+  }
+  .cart-block--summary__count {
+    background: $red;
+    width: 18px;
+    height:18px;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    right: calc(1rem - 10px);
+  }
+}

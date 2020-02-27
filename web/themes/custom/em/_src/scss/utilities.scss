@@ -1,0 +1,49 @@
+//
+// Positioning
+//
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  &-top {
+    position: absolute;
+    top: 0;
+  }
+  &-bottom {
+    position: absolute;
+    top: 0;
+  }
+}
+
+
+//
+// Full width element
+//
+.full-width {
+  margin-left: -9999rem !important;
+  margin-right: -9999rem !important;
+  padding-left: 9999rem !important;
+  padding-right: 9999rem !important;
+}
+
+
+//
+// Vertical Height
+//
+
+.vh-100 {
+  height: 100vh;
+}
+
+//
+// Background size - Cover
+//
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+}

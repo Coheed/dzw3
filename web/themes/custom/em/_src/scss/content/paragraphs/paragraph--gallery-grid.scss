@@ -1,0 +1,32 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Paragraph Gallery Grid
+//
+.paragraph--type--gallery-grid {
+  .view-mode-gallery-grid {
+    margin-left: -10px;
+    margin-right: -10px;
+    position: relative;
+    max-height: 0px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    &.masonry-loaded {
+      max-height: 9999rem;
+      opacity: 1;
+    }
+  }
+  figure {
+    width: 33.334%;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+    @include media-breakpoint-up(lg) {
+      width: 25%;
+    }
+  }
+}

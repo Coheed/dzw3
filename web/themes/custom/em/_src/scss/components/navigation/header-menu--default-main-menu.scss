@@ -1,0 +1,40 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+.region-header-main-menu {
+  .menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu-item {
+    display: block;
+    margin: 0;
+    padding: 0;
+    a {
+      padding: .75rem 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  .menu > .menu-item {
+    > a {
+      padding: 0.889rem 0.778rem;
+      color: $sf-level-1-link-color;
+      font-weight: $sf-level-1-font-weight;
+      font-size: $sf-level-1-font-size;
+      text-transform: $sf-level-1-text-transform;
+      border-radius: .25rem;
+      &:hover {
+        color: $sf-level-1-link-color-hover;
+      }
+    }
+  }
+}

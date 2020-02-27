@@ -1,0 +1,346 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Teasers with no borders
+//
+.no-borders {
+  .teaser {
+    border: none!important;
+  }
+}
+
+
+// ===================
+// GRID VIEWS
+// ===================
+
+[class*="grid--"],
+[class*="grid-sm--"],
+[class*="grid-md--"],
+[class*="grid-lg--"],
+[class*="grid-xl--"],
+[class*="grid__"] {
+  > ul {
+    @include list-unstyled;
+    @include make-row();
+    margin-top: 1.667rem;
+    > li {
+      @include make-col-ready();
+      margin-top: 1.667rem;
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+  &.no-gutters > ul {
+    margin-right: 0;
+    margin-left: 0;
+    > li {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &.equal-height article,
+    &.equal-height .teaser--card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      > div {
+        width: 100%;
+      }
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+      }
+    }
+  }
+}
+
+
+// The grids are using Bootstrap breakpoints.
+//
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    // Two column grid
+    .grid#{$infix}--2-columns > ul > li {
+      @include make-col(6);
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+    // Three column grid
+    .grid#{$infix}--3-columns > ul > li {
+      @include make-col(4);
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: 0;
+      }
+    }
+    // Four column grid
+    .grid#{$infix}--4-columns > ul > li {
+      @include make-col(3);
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4){
+        margin-top: 0;
+      }
+    }
+    // Six column grid
+    .grid#{$infix}--6-columns > ul > li {
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(4);
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-top: 0;
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        @include make-col(2);
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+
+// --------------------------------
+// START: Deprecated Grid styles
+// --------------------------------
+
+// Two column grid
+//
+.grid__2-columns > ul > li {
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+}
+
+// Three column grid
+//
+.grid__3-columns > ul > li {
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+  }
+}
+
+// Four column grid
+//
+.grid__4-columns > ul > li {
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    @include make-col(3);
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4){
+      margin-top: 0;
+    }
+  }
+}
+
+// Six column grid
+//
+.grid__6-columns > ul > li {
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  @include media-breakpoint-up(md) {
+    @include make-col(4);
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    @include make-col(2);
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-top: 0;
+    }
+  }
+}
+// --------------------------------
+// END: Deprecated Grid styles
+// --------------------------------
+
+// ===================
+// LIST
+// ===================
+
+.list > ul > li {
+  //border-bottom: 1px solid $gray-blue-50;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.list--tiny > ul > li {
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+}
+
+.list--bordered > ul > li {
+  border-bottom: 1px solid $gray-blue-50;
+}
+
+
+// ===================
+// COLUMN VIEWS
+// ===================
+
+%make-column-ready {
+  @include list-unstyled;
+  margin-bottom: 0;
+  > li {
+    margin-bottom: $card-columns-margin;
+  }
+  @include media-breakpoint-up(sm) {
+    column-count: 1;
+    column-gap: $card-columns-gap;
+    > li {
+      display: inline-block; // Don't let them vertically span multiple columns
+      width: 100%; // Don't let their width change
+    }
+  }
+}
+
+// Two columns
+//
+.column--2-columns > ul,
+.column__2-columns > ul {
+  @extend %make-column-ready;
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+  }
+}
+
+// Three columns
+//
+.column--3-columns > ul,
+.column__3-columns > ul {
+  @extend %make-column-ready;
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-up(lg) {
+    column-count: 3;
+  }
+}
+
+// Four columns
+//
+.column--4-columns > ul,
+.column__4-columns > ul {
+  @extend %make-column-ready;
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-up(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-up(xl) {
+    column-count: 4;
+  }
+}
+
+
+// ===================
+// MASONRY
+// ===================
+.masonry--2-columns,
+.masonry--3-columns,
+.masonry--4-columns {
+  .masonry-layout {
+    @include make-row;
+
+    .masonry-item {
+      @include make-col-ready();
+      @include make-col(12);
+      padding-bottom: 1.6rem;
+    }
+  }
+}
+
+// Two column masonry
+//
+.masonry--2-columns {
+  .masonry-layout .masonry-item {
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+  }
+}
+
+// Three column masonry,
+.masonry--3-columns {
+  .masonry-layout .masonry-item {
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+  }
+}
+
+// Four column masonry,
+.masonry--4-columns {
+  .masonry-layout .masonry-item {
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+    @include media-breakpoint-up(xl) {
+      @include make-col(3);
+    }
+  }
+}

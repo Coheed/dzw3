@@ -1,0 +1,18 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+figure {
+  display: block;
+
+  figcaption {
+    padding: 0 1rem;
+    border-left: 5px solid rgba($gray-blue-900, .2);
+    color: rgba($gray-blue-900, .6);
+    font-size: .8rem;
+    > div {
+      margin-top: .8rem;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+//
+// Dependencies
+//
+@import "dependencies";
+
+
+//
+// Responsive font size
+//
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Responsive font size
+html {
+  font-size: 14px;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 18px;
+  }
+}
+
+
+//
+// Do not display outlines
+//
+* { outline: none!important; }
+
+//
+// Remove bottom margin on the
+// last <p> element
+//
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+//
+// If Bootstrap container is placed into
+// another Bootstrap container element,
+// then we'll remove the padding from the
+// second container.
+//
+.container-fluid .container-fluid,
+.container-fluid .container,
+.container .container,
+.container .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//
+// Override Bootstrap fluid container
+//
+.container-fluid {
+  width: 100%;
+  @include media-breakpoint-up(lg) {
+    width: 90%;
+  }
+}
+
+.container .container-fluid {
+  width: 100%!important;
+}
+
+
+
+//
+// System block
+//
+.block-system {
+  position: relative;
+  z-index: 1;
+}
+
+
+//
+// Link default transitions
+//
+a, a.btn, button {
+  transition: background-color .2s ease, color .2s ease, opacity .2s ease;
+}

@@ -1,0 +1,8 @@
+name: 'EM Thunder Demo'
+type: module
+description: 'Provide demo content for Thunder.'
+package: EM
+core: '8.x'
+dependencies:
+  - better_normalizers:better_normalizers
+  - default_content:default_content

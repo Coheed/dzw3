@@ -1,0 +1,15 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Paragraphs
+//
+.field--name-field-paragraphs > .field__item {
+  margin: $article-p-tag-margin;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

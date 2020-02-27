@@ -1,0 +1,8 @@
+name: 'EM Default Content'
+type: module
+description: 'Provide default content.'
+package: EM
+core: '8.x'
+dependencies:
+  - better_normalizers:better_normalizers
+  - default_content:default_content
