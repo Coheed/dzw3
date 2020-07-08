@@ -1,0 +1,59 @@
+uuid: bd355b0c-bad3-45d7-9b6d-d7824b751faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_full_width
+    - views.view.em_example_10
+    - views.view.em_featured_single_item_slider
+  module:
+    - panels
+    - system
+    - views
+id: home_page_full_width-panels_variant-2
+label: '2 Columns Grid'
+variant: panels_variant
+variant_settings:
+  blocks:
+    7c2f0ef6-da40-46d8-8a10-a9abc49754f1:
+      id: 'views_block:em_example_10-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: 7c2f0ef6-da40-46d8-8a10-a9abc49754f1
+      weight: 1
+    0477e0c5-ad93-4cca-9dab-b33a5c32abcd:
+      id: 'views_block:em_featured_single_item_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: 0477e0c5-ad93-4cca-9dab-b33a5c32abcd
+      weight: 1
+  id: panels_variant
+  uuid: 0bebece2-5a71-47b2-b90f-2971c9771f8c
+  label: null
+  weight: 0
+  layout: home_1_overlay_header
+  layout_settings: {  }
+  page_title: 'Full Width 2 Columns Grid'
+  storage_type: page_manager
+  storage_id: home_page_full_width-panels_variant-2
+  builder: ipe
+page: home_page_full_width
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /full-width/2-column-grid
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

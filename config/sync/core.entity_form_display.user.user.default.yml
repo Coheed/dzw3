@@ -1,0 +1,204 @@
+uuid: 9907115f-980e-404d-997c-74f3fe4323cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_account_name
+    - field.field.user.user.field_facebook
+    - field.field.user.user.field_google_plus
+    - field.field.user.user.field_instagram
+    - field.field.user.user.field_linkedin
+    - field.field.user.user.field_pinterest
+    - field.field.user.user.field_short_bio
+    - field.field.user.user.field_twitter
+    - field.field.user.user.panelizer
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - field_group
+    - focal_point
+    - link
+    - path
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_user_account:
+      children:
+        - group_author_info
+        - group_social_media_pages
+        - group_my_account
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'User Account'
+      region: content
+    group_my_account:
+      children:
+        - account
+        - path
+        - timezone
+        - langcode
+        - language
+      parent_name: group_user_account
+      weight: 25
+      format_type: tab
+      format_settings:
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Account
+      region: content
+    group_social_media_pages:
+      children:
+        - field_facebook
+        - field_twitter
+        - field_google_plus
+        - field_instagram
+        - field_linkedin
+        - field_pinterest
+      parent_name: group_user_account
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Social media pages'
+      region: content
+    group_author_info:
+      children:
+        - field_account_name
+        - field_short_bio
+        - user_picture
+      parent_name: group_user_account
+      weight: 23
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Personal Info'
+      region: content
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+  field_account_name:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_facebook:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_google_plus:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_instagram:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_linkedin:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_pinterest:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_short_bio:
+    weight: 23
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_twitter:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 26
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  language:
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image_focal_point
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+    weight: 24
+    region: content
+hidden:
+  panelizer: true

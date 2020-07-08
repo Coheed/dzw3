@@ -1,0 +1,25 @@
+uuid: 43b14159-a50c-42e0-b31e-e57ebef0ed34
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.t10
+    - image.style.t4
+    - image.style.teaser_card_sm
+  theme:
+    - em
+id: teaser_small_card
+label: 'Teaser small card'
+image_style_mappings:
+  -
+    breakpoint_id: em.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: t4
+  -
+    breakpoint_id: em.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser_card_sm
+breakpoint_group: em
+fallback_image_style: t10

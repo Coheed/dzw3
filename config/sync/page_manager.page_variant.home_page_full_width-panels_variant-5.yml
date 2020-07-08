@@ -1,0 +1,59 @@
+uuid: 59255218-3020-4d61-83de-9e1612c1d27b
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_full_width
+    - views.view.em_example_7
+    - views.view.em_featured_single_item_slider
+  module:
+    - panels
+    - system
+    - views
+id: home_page_full_width-panels_variant-5
+label: '4 Columns Masonry'
+variant: panels_variant
+variant_settings:
+  blocks:
+    66650416-1ec7-4320-82ad-b06afc692363:
+      id: 'views_block:em_example_7-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle
+      uuid: 66650416-1ec7-4320-82ad-b06afc692363
+      weight: 1
+    401a3972-08a9-4111-8870-a0d22c6306d4:
+      id: 'views_block:em_featured_single_item_slider-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: 401a3972-08a9-4111-8870-a0d22c6306d4
+      weight: 1
+  id: panels_variant
+  uuid: 08f36941-2801-44ce-b1a2-30247550a5a3
+  label: null
+  weight: 0
+  layout: home_1_fluid_overlay_header
+  layout_settings: {  }
+  page_title: 'Full Width 4 Columns Masonry'
+  storage_type: page_manager
+  storage_id: home_page_full_width-panels_variant-5
+  builder: ipe
+page: home_page_full_width
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /full-width/4-column-masonry
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

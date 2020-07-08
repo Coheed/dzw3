@@ -1,0 +1,79 @@
+uuid: e3018cfe-bce9-4f85-ab31-35d36ddd8ca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.taxonomy_term
+    - views.view.em_channels_and_tags
+  module:
+    - ctools
+    - panels
+    - system
+    - views
+id: taxonomy_term-panels_variant-1
+label: Tags
+variant: panels_variant
+variant_settings:
+  blocks:
+    bd6a5875-5066-4a2d-a340-31be712fa1e3:
+      id: page_title_block
+      label: 'Page title'
+      provider: core
+      label_display: '0'
+      region: page_title
+      weight: 0
+      uuid: bd6a5875-5066-4a2d-a340-31be712fa1e3
+      context_mapping: {  }
+    a7ec19a2-2634-4a44-91fc-2313ba0be4cc:
+      id: system_breadcrumb_block
+      label: Breadcrumbs
+      provider: system
+      label_display: '0'
+      region: breadcrumb
+      weight: 0
+      uuid: a7ec19a2-2634-4a44-91fc-2313ba0be4cc
+      context_mapping: {  }
+    da8e3300-494b-443c-b368-defd17b06c3b:
+      id: local_tasks_block
+      label: Tabs
+      provider: core
+      label_display: '0'
+      primary: true
+      secondary: true
+      region: tabs
+      weight: 0
+      uuid: da8e3300-494b-443c-b368-defd17b06c3b
+      context_mapping: {  }
+    401eb948-8e46-49c5-a0da-9bc141290afd:
+      id: 'views_block:em_channels_and_tags-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: 401eb948-8e46-49c5-a0da-9bc141290afd
+      context_mapping: {  }
+  id: panels_variant
+  uuid: c9ba520e-8426-4d7c-a04c-1513349817cd
+  label: null
+  weight: 0
+  layout: page_2
+  layout_settings: {  }
+  page_title: '[term:name]'
+  storage_type: page_manager
+  storage_id: taxonomy_term-panels_variant-1
+  builder: ipe
+page: taxonomy_term
+weight: -10
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      tags: tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+selection_logic: and
+static_context: {  }

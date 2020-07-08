@@ -1,0 +1,16 @@
+uuid: d8f8b9c2-d9a0-48a9-9a8e-de604e765d00
+langcode: en
+status: true
+dependencies: {  }
+id: home_page_full_width
+label: 'Home Page (Full Width)'
+description: 'Full width Home Page examples.'
+use_admin_theme: false
+path: '/full-width/{layout}'
+access_logic: and
+access_conditions: {  }
+parameters:
+  layout:
+    machine_name: layout
+    type: string
+    label: Layout

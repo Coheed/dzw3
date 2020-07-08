@@ -1,0 +1,22 @@
+uuid: a4d61ebf-96da-4e49-b74c-40dc9599379a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - em_magazine
+_core:
+  default_config_hash: TyrjMN8WICSjvByvMguh42msLH_cB9MyJbpYfwLTIGU
+id: breadcrumbs
+theme: em_magazine
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

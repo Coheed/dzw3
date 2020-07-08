@@ -1,0 +1,72 @@
+uuid: 152bfd43-f798-4007-a621-9dac0fdbd5a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_combo
+    - views.view.em_combo_example_3
+    - views.view.em_example_9
+    - views.view.em_featured_single_item_slider
+  module:
+    - panels
+    - system
+    - views
+id: home_page_combo-panels_variant-2
+label: 'Combo 3'
+variant: panels_variant
+variant_settings:
+  blocks:
+    ba7943fa-0019-4757-83e0-49492b35e2ed:
+      id: 'views_block:em_combo_example_3-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: ba7943fa-0019-4757-83e0-49492b35e2ed
+      weight: 1
+    06a6e8d1-3f38-42a9-9e8a-eadcef1c73f8:
+      id: 'views_block:em_example_9-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      pager_offset: 0
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 06a6e8d1-3f38-42a9-9e8a-eadcef1c73f8
+      weight: 1
+    0e32d445-332b-4d6b-9e81-8d4f45480c4c:
+      id: 'views_block:em_featured_single_item_slider-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: 0e32d445-332b-4d6b-9e81-8d4f45480c4c
+      weight: 1
+  id: panels_variant
+  uuid: 6a702b44-dd03-4b2f-bcc9-e6b7faca6244
+  label: null
+  weight: 0
+  layout: home_1_overlay_header
+  layout_settings: {  }
+  page_title: 'Combo 3'
+  storage_type: page_manager
+  storage_id: home_page_combo-panels_variant-2
+  builder: ipe
+page: home_page_combo
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /combo/3
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,49 @@
+uuid: df338991-052f-49bf-9cc0-62951c85e232
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.background
+    - field.field.media.image.field_copyright
+    - field.field.media.image.field_description
+    - field.field.media.image.field_expires
+    - field.field.media.image.field_image
+    - field.field.media.image.field_source
+    - field.field.media.image.field_tags
+    - image.style.background
+    - media.type.image
+  module:
+    - empty_fields
+    - image
+_core:
+  default_config_hash: gYQgagpuplhSV2aBJdxJVrihXIEQEfkSW3lvTFxbFVU
+id: media.image.background
+targetEntityType: media
+bundle: image
+mode: background
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: background
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: image_url
+    region: content
+hidden:
+  created: true
+  field_brands: true
+  field_channel: true
+  field_copyright: true
+  field_description: true
+  field_events: true
+  field_expires: true
+  field_people: true
+  field_source: true
+  field_tags: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

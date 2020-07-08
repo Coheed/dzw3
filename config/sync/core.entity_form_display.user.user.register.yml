@@ -1,0 +1,56 @@
+uuid: 49fe2582-4cd9-4714-bd61-3a943db09163
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.field_account_name
+    - field.field.user.user.field_facebook
+    - field.field.user.user.field_google_plus
+    - field.field.user.user.field_instagram
+    - field.field.user.user.field_linkedin
+    - field.field.user.user.field_pinterest
+    - field.field.user.user.field_short_bio
+    - field.field.user.user.field_twitter
+    - field.field.user.user.panelizer
+    - field.field.user.user.user_picture
+  module:
+    - path
+    - user
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_account_name: true
+  field_facebook: true
+  field_google_plus: true
+  field_instagram: true
+  field_linkedin: true
+  field_pinterest: true
+  field_short_bio: true
+  field_twitter: true
+  langcode: true
+  language: true
+  panelizer: true
+  user_picture: true

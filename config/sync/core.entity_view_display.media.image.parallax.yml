@@ -1,0 +1,40 @@
+uuid: da60fac7-40b5-4128-bd4d-1f0a02d63a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.parallax
+    - field.field.media.image.field_copyright
+    - field.field.media.image.field_description
+    - field.field.media.image.field_expires
+    - field.field.media.image.field_image
+    - field.field.media.image.field_source
+    - field.field.media.image.field_tags
+    - image.style.wide_background
+    - media.type.image
+  module:
+    - image
+id: media.image.parallax
+targetEntityType: media
+bundle: image
+mode: parallax
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: wide_background
+    third_party_settings: {  }
+    type: image_url
+    region: content
+hidden:
+  created: true
+  field_copyright: true
+  field_description: true
+  field_expires: true
+  field_source: true
+  field_tags: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

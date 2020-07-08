@@ -1,0 +1,47 @@
+uuid: 9a5cd1e5-bd4c-4b75-9615-73e4f9a5975c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_account_name
+    - field.field.user.user.field_facebook
+    - field.field.user.user.field_google_plus
+    - field.field.user.user.field_instagram
+    - field.field.user.user.field_linkedin
+    - field.field.user.user.field_pinterest
+    - field.field.user.user.field_short_bio
+    - field.field.user.user.field_twitter
+    - field.field.user.user.panelizer
+    - field.field.user.user.user_picture
+    - image.style.t9
+  module:
+    - image
+    - user
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content:
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: t9
+      image_link: content
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  field_account_name: true
+  field_facebook: true
+  field_google_plus: true
+  field_instagram: true
+  field_linkedin: true
+  field_pinterest: true
+  field_short_bio: true
+  field_twitter: true
+  langcode: true
+  member_for: true
+  panelizer: true
+  realname: true

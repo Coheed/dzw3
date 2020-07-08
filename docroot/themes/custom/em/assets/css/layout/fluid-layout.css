@@ -1,0 +1,9 @@
+.header .container {
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .header .container {
+    max-width: 90%;
+  }
+}

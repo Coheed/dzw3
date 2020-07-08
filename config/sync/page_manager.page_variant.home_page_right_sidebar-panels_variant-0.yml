@@ -1,0 +1,94 @@
+uuid: 0b003da0-2518-4fda-ba4c-c7a428655101
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_right_sidebar
+    - views.view.em_editors_picks
+    - views.view.em_example_9
+    - views.view.em_featured_single_item_slider
+    - views.view.em_popular_content
+  module:
+    - panels
+    - poll
+    - system
+    - views
+id: home_page_right_sidebar-panels_variant-0
+label: '2 Columns Masonry'
+variant: panels_variant
+variant_settings:
+  blocks:
+    e4795719-b60c-40cd-9eb3-58b35c257c97:
+      id: 'views_block:em_example_9-block_1'
+      label: Latest
+      provider: views
+      label_display: '0'
+      views_label: Latest
+      items_per_page: none
+      region: middle_above_first
+      weight: 1
+      pager_offset: 0
+      context_mapping: {  }
+      uuid: e4795719-b60c-40cd-9eb3-58b35c257c97
+    dda92e95-6d4b-47fd-b252-5446fb9649a0:
+      id: 'views_block:em_editors_picks-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: 1
+      context_mapping: {  }
+      uuid: dda92e95-6d4b-47fd-b252-5446fb9649a0
+    46c50a0a-f8cc-46e0-90ef-a87c92dff676:
+      id: 'views_block:em_popular_content-block_3'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: middle_above_second
+      weight: 2
+      context_mapping: {  }
+      uuid: 46c50a0a-f8cc-46e0-90ef-a87c92dff676
+    0d01dad9-d593-4bf8-8647-8ea14ad22eb9:
+      id: 'views_block:em_featured_single_item_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: featured
+      weight: 1
+      context_mapping: {  }
+      uuid: 0d01dad9-d593-4bf8-8647-8ea14ad22eb9
+    9215c7c8-5bf5-46cd-8135-34ed0eea2e9e:
+      id: poll_recent_block
+      label: Poll
+      provider: poll
+      label_display: visible
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: 9215c7c8-5bf5-46cd-8135-34ed0eea2e9e
+      weight: 1
+  id: panels_variant
+  uuid: 79781da7-ee01-434b-beab-c6931391e12d
+  label: null
+  weight: 0
+  layout: home_1_overlay_header
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: home_page_right_sidebar-panels_variant-0
+  builder: ipe
+page: home_page_right_sidebar
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /right-sidebar/two-columns-masonry
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

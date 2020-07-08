@@ -1,0 +1,107 @@
+uuid: b4c3acc1-0bf2-4c69-844e-8efbe4a82bb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.t1
+    - field.field.node.article.comment
+    - field.field.node.article.field_channel
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_seo_title
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_media
+    - field.field.node.article.field_teaser_text
+    - field.field.node.article.panelizer
+    - node.type.article
+  module:
+    - field_formatter
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.article.t1
+targetEntityType: node
+bundle: article
+mode: t1
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_channel:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_teaser_media:
+    weight: 0
+    label: hidden
+    settings:
+      field_name: field_image
+      label: hidden
+      type: blazy
+      settings:
+        image_style: ''
+        thumbnail_style: ''
+        responsive_image_style: teaser_card_cropped_media
+        media_switch: ''
+        box_style: ''
+        box_caption: ''
+        box_caption_custom: ''
+        ratio: ''
+        sizes: ''
+        breakpoints:
+          xs:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+          sm:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+          md:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+          lg:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+          xl:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+        current_view_mode: _custom
+        background: false
+        caption:
+          title: '0'
+          alt: '0'
+    third_party_settings: {  }
+    type: field_formatter_with_inline_settings
+    region: content
+  field_teaser_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  comment: true
+  field_meta_tags: true
+  field_paragraphs: true
+  field_seo_title: true
+  field_tags: true
+  langcode: true
+  links: true
+  panelizer: true
+  shariff_field: true

@@ -1,0 +1,27 @@
+uuid: 2de2dcfe-cae1-434a-bbcd-a933970d7221
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - em_magazine
+_core:
+  default_config_hash: q2OdyvPuukIPM5GDA_FDlCwbrWpusqlxwKyw74vTjyU
+id: footer
+theme: em_magazine
+region: footer_top
+weight: -4
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,17 @@
+uuid: 368e8933-a7d2-4c24-9e12-9c6b23f79ece
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_background
+label: 'Background (Large 1600x1000)'
+effects:
+  d985b56d-2ed1-4cab-a9cf-acb2e6798601:
+    uuid: d985b56d-2ed1-4cab-a9cf-acb2e6798601
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 1000
+      crop_type: focal_point

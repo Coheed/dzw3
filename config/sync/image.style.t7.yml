@@ -1,0 +1,17 @@
+uuid: 08a17e7c-9f8c-4554-8e6f-ff4ce9825300
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: t7
+label: 'Teaser Item (360×270)'
+effects:
+  630014c3-241f-4da5-baa2-a37af0787cb5:
+    uuid: 630014c3-241f-4da5-baa2-a37af0787cb5
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 270
+      crop_type: focal_point

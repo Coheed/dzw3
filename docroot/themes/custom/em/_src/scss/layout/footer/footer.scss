@@ -1,0 +1,115 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Footer Wrapper
+//
+.page-footer__top-wrapper {
+  background-color: darken($gray-blue-900, 10%);
+  padding: 2rem 0;
+  color: rgba(#FFF, .3);
+  text-align: center;
+  a {
+    color: #FFF;
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  // Logo
+  //
+  .logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    &-dark {
+      display: none;
+    }
+  }
+
+  // Social menu
+  //
+  .social-menu {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+      border: 2px solid #FFF;
+      border-radius: 50%;
+      transition: background-color .2s ease-in-out, color .2s ease-in-out;
+      &:last-child {
+        margin-right: 0;
+      }
+      svg {
+        margin: auto;
+      }
+      &:hover {
+        opacity: 1;
+        background-color: #FFF;
+        color: #000;
+      }
+    }
+    .social-menu--link-title {
+      margin-left: -10px;
+      margin-right: 15px;
+    }
+  }
+
+  // Footer block style
+  //
+  .block {
+    margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Menus block style
+  //
+  .block-menu {
+    @include full-width;
+    border-top: 1px solid rgba(#FFF, .2);
+    border-bottom: 1px solid rgba(#FFF, .2);
+  }
+  .block-menu ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: center;
+    }
+    
+    li a {
+      display: block;
+      padding: 1rem .8rem 1.1rem .8rem;
+      border-bottom: 1px solid rgba(#FFF, .2);
+      line-height: 1rem;
+      @include media-breakpoint-up(md) {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+
+//
+// Footer bottom wrapper
+//
+.page-footer__bottom-wrapper {
+  background-color: #0a1013;
+  color: rgba(#FFF, .4);
+  text-align: center;
+  a {
+    color: rgba(#FFF, .6);
+    text-decoration: underline;
+  }
+}

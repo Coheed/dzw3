@@ -1,0 +1,52 @@
+name: 'EM Thunder Demo'
+type: module
+description: 'Provide demo content for Thunder.'
+package: EM
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - better_normalizers:better_normalizers
+  - default_content:default_content
+default_content:
+  file:
+    - a12d044e-f608-43cc-a4f2-7f2b282ab9be
+  media:
+    - bb2c9c8f-a3df-4157-9ba0-68cc322e34bc
+    - 434d9065-b8c2-422a-bbed-f0d5d580a638
+    - 9b0e35ee-376c-4476-8935-750f1f1c44f2
+  node:
+    - c659717b-3a44-409d-ae9d-6711b759675c
+    - 5554e458-9fc8-4015-a284-868582a7719c
+    - 599ba860-dc9b-4ade-9d76-5d9a9e89a51c
+    - 8aa8393c-97ce-45d7-aca4-4c76fa32e7a1
+    - 8c38b605-0b77-4ed5-9771-b57e8d425373
+    - 11379918-066e-4660-96f2-76de4fd3722b
+  taxonomy_term:
+    - 221db391-48ac-4f9a-9bec-bc4cf48c961b
+    - 55392c43-c018-4c7c-b65f-602f98d14072
+    - e666cb65-03c6-4087-a90e-4bf2095b4c79
+  poll:
+    - 825aab9f-da53-4ea3-8adf-1ed809fe4104
+  poll_choice:
+    - 71a16522-4907-4794-845a-b3fc80b85563
+    - d2fb8c66-7420-4ac5-b857-8c45464b62f7
+    - e106d3bc-5d25-4e5e-9d23-2e54eafd50b3
+  paragraph:
+    - 1daab08b-9be1-4f06-adeb-b6d0355c69e1
+    - 531e0a19-8174-489f-9872-983616d34337
+    - aa092ea9-155e-48d8-b148-ad9e8ddb2471
+    - db789548-1dd2-4665-8bc0-71fe4dab7cf1
+    - 54848479-dcc6-4671-b263-420e1c37a8c7
+    - e9175972-4574-4e4b-9b0e-25b614eb80db
+    - 9176f5a9-5a8e-40c9-b386-9a89118ec42b
+    - 18ff7026-21eb-41ed-95d1-5c10c6036b38
+    - d0dd7bf8-00ba-4d5c-b662-3e67af7205ad
+    - 105a4a9c-c7db-412f-ad4b-859464810aab
+    - cc141413-2f23-4e53-beb7-0e9773774cc6
+    - 6f93debc-41f8-4f8e-9165-c05d7caa60a9
+    - 14a41e90-6dcf-4c86-a824-a4776a4ef2ef
+    - 1eb7ceb5-3dfc-4897-8fe5-b25ac118310e
+    - 3760051c-aa42-4cb2-9537-d144cc73c1d1
+    - 3b93648a-e073-4e6f-a983-06910355b569
+    - d579f417-1396-4aa8-bbf4-3fd5862ea838
+    - 495393d8-4f08-4ca3-a8f1-42ad20d65bfd
+

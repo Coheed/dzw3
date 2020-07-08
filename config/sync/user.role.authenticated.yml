@@ -1,0 +1,22 @@
+uuid: 93872313-e0a4-4e59-bd8b-323627f7d495
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3O0KivFBGa2KZ87o1MPpkyh5FtmbVP05nQQXq-eSNZk
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access polls'
+  - 'access user profiles'
+  - 'access_unpublished node article'
+  - 'cancel account'
+  - 'change own username'
+  - 'search content'
+  - 'use text format basic_html'
+  - 'view media'
+  - 'view published terms in channel'
+  - 'view published terms in tags'

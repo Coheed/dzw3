@@ -1,0 +1,27 @@
+uuid: 1c94c915-d3da-4b45-aebf-197901e2934d
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_entity_pinterest
+    - media_expire
+third_party_settings:
+  crop:
+    image_field: null
+  media_expire:
+    enable_expiring: null
+    expire_field: null
+    fallback_media: null
+_core:
+  default_config_hash: ud8kYHnvDXAbpiLUl67hjTbmzRsD5b1-j5avvIF25YA
+id: pinterest
+label: Pinterest
+description: ''
+source: pinterest
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_url
+  use_pinterest_api: false
+field_map: {  }

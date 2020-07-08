@@ -1,0 +1,61 @@
+uuid: 8f817851-fb58-4c39-88b4-dda7c6ee3fdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.t9
+    - field.field.node.article.comment
+    - field.field.node.article.field_channel
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_seo_title
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_media
+    - field.field.node.article.field_teaser_text
+    - field.field.node.article.panelizer
+    - node.type.article
+  module:
+    - field_formatter
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.article.t9
+targetEntityType: node
+bundle: article
+mode: t9
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_teaser_media:
+    type: field_formatter_with_inline_settings
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      field_name: field_image
+      label: hidden
+      type: image
+      settings:
+        image_style: t9
+        image_link: ''
+    third_party_settings: {  }
+hidden:
+  comment: true
+  field_channel: true
+  field_meta_tags: true
+  field_paragraphs: true
+  field_seo_title: true
+  field_tags: true
+  field_teaser_text: true
+  langcode: true
+  links: true
+  panelizer: true
+  shariff_field: true

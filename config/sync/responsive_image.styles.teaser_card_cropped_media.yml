@@ -1,0 +1,25 @@
+uuid: 2b9353bf-ce3f-4e3f-ae5e-4bb400510ff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.t1
+    - image.style.t10
+    - image.style.teaser_card_sm
+  theme:
+    - em
+id: teaser_card_cropped_media
+label: 'Teaser card (cropped media)'
+image_style_mappings:
+  -
+    breakpoint_id: em.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: t1
+  -
+    breakpoint_id: em.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser_card_sm
+breakpoint_group: em
+fallback_image_style: t10

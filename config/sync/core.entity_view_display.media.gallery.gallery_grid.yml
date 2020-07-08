@@ -1,0 +1,36 @@
+uuid: f7ec9328-0295-4263-be51-a4a3a55663e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.gallery_grid
+    - field.field.media.gallery.field_media_images
+    - media.type.gallery
+  module:
+    - empty_fields
+    - field_formatter
+id: media.gallery.gallery_grid
+targetEntityType: media
+bundle: gallery
+mode: gallery_grid
+content:
+  field_media_images:
+    weight: 0
+    label: hidden
+    settings:
+      field_name: field_image
+      label: hidden
+      type: image_url
+      settings:
+        image_style: t10
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: field_formatter_with_inline_settings
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

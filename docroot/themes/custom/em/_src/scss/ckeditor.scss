@@ -1,0 +1,12 @@
+//
+// Dependencies
+//
+@import "dependencies";
+
+body {
+  @include paragraph__type-text;
+  width: 770px; // as article width
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem;
+}

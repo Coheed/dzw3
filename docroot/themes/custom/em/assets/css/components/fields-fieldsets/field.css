@@ -1,0 +1,13 @@
+.field--label-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.field--label-inline .field__label {
+  margin-right: .5rem;
+}
+
+.field--label-inline .field__label:after {
+  content: ':';
+}

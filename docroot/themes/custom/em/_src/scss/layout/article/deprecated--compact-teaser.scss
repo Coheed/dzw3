@@ -1,0 +1,124 @@
+// Deprecated Compact Teaser Style.
+//
+// This style is deprecated and is used by
+// Compact Teasers templates before theme version 1.4.0.
+
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+.teaser--compact-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: $teaser__compact--sm--min-height;
+  @include media-breakpoint-up(md) {
+    height: $teaser__compact--min-height;
+  }
+  &:before {
+    @include make-color-overlay($teaser__compact--overlay-color, 1);
+    content: '';
+  }
+  .teaser__content {
+    padding: 1.6667rem;
+    color: #FFF;
+    position: relative;
+    z-index: 5;
+  }
+  .teaser__channel {
+    margin-bottom: .5rem;
+    color: #FFF;
+    a { color: #FFF; }
+  }
+  .teaser__headline {
+    margin-bottom: .5rem;
+    font-size: 2.4rem;
+    a { color: #FFF; }
+  }
+  .teaser__authored {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FFF;
+    a {
+      color: rgba(#FFF, .5);
+    }
+  }
+  .teaser__link {
+    @include make-blank-overlay(5);
+    &:before {
+      @include make-blank-overlay;
+      content: '';
+      transition: opacity .2s ease-in-out;
+      box-shadow: inset 0 0 7rem 1rem rgba(#000, .7);
+      opacity: 0;
+    }
+  }
+  //
+  // States
+  //
+  &.is--highlighted {
+    &:before {
+      background: $teaser--compact--is--highlighted--bg-color !important;
+      opacity: .65;
+    }
+    .channel--bordered {
+      border-color: #FFF;
+    }
+  }
+  &:hover {
+    .teaser__link:before {
+      opacity: 1;
+    }
+  }
+}
+// Large Compact teaser
+// =======================
+.teaser--compact--large {
+  height: $teaser__compact--large--sm--min-height;
+  @include media-breakpoint-up(md) {
+    height: $teaser__compact--large--min-height;
+  }
+  .teaser__channel {
+    font-size: 1.2rem;
+  }
+  .teaser__authored {
+    margin-top: .5rem;
+    font-size: .6667rem;
+  }
+  &.text-center .teaser__headline {
+    margin-right: 0;
+  }
+  .field--name-field-teaser-text {
+    display: none;
+    font-size: .7778rem;
+    margin-top: .8rem;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+  .teaser__content {
+    @include media-breakpoint-up(md) {
+      margin-right: 20%;
+    }
+  }
+}
+
+.layout-region--top .teaser--compact--large ,
+.layout-region--middle .teaser--compact--large ,
+.layout-region--bottom .teaser--compact--large {
+
+  @include media-breakpoint-up(md) {
+    height: $teaser__compact--large--min-height + 10vh;
+  }
+  .teaser__content {
+    @include media-breakpoint-up(lg) {
+      margin-right: 45%;
+    }
+  }
+  .teaser__headline {
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+  }
+}

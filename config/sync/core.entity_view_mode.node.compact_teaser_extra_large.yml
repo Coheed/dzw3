@@ -1,0 +1,10 @@
+uuid: b67af735-9a00-4cc6-91c8-eb9e588b0b99
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.compact_teaser_extra_large
+label: 'Compact teaser (Extra Large)'
+targetEntityType: node
+cache: true

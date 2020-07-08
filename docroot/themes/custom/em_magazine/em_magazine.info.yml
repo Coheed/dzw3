@@ -1,0 +1,19 @@
+name: EM Magazine
+type: theme
+base theme: em
+description: 'Blog & Magazine Drupal Theme'
+package: EM
+version: VERSION
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+regions:
+  header_secondary_menu: 'Header secondary menu'
+  header_main_menu: 'Header main menu'
+  tabs: 'Tabs'
+  page_title: 'Page title'
+  breadcrumb: 'Breadcrumb'
+  content: 'Main content'
+  offcanvas_sidebar: 'Off-Canvas sidebar'
+  footer_top: 'Footer top'
+  footer_bottom: 'Footer bottom'

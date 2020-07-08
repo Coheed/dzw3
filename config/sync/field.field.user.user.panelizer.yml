@@ -1,0 +1,21 @@
+uuid: c39141e2-a1a3-40e7-b41d-a2bddfe777b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.panelizer
+  module:
+    - panelizer
+    - user
+id: user.user.panelizer
+field_name: panelizer
+entity_type: user
+bundle: user
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

@@ -1,0 +1,21 @@
+uuid: c62981b4-271c-402d-b4e0-9c1fa1778d8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.field_additional_informations
+  module:
+    - text
+id: commerce_product.default.field_additional_informations
+field_name: field_additional_informations
+entity_type: commerce_product
+bundle: default
+label: 'Additional Informations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

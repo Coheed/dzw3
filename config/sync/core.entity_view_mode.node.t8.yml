@@ -1,0 +1,10 @@
+uuid: d5904e99-e739-426a-b460-838137314bb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.t8
+label: 'Large teaser list'
+targetEntityType: node
+cache: true

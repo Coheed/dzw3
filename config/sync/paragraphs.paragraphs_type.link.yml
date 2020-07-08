@@ -1,0 +1,11 @@
+uuid: c7107c6f-38c9-43c7-9940-a7c5a28fb3e6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FM--lxD45XEQ335U8x6mLVMNfYthKgRmQdiGvWAc2tQ
+id: link
+label: Link
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

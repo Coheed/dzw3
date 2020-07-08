@@ -1,0 +1,59 @@
+uuid: 34a69006-5fab-4382-ba3d-63c7d471a2e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_full_width
+    - views.view.em_example_11
+    - views.view.em_featured_single_item_slider
+  module:
+    - panels
+    - system
+    - views
+id: home_page_full_width-panels_variant-3
+label: '3 Columns Grid'
+variant: panels_variant
+variant_settings:
+  blocks:
+    23f6a2f7-79df-45ad-bb60-de26fac15eaa:
+      id: 'views_block:em_example_11-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: 23f6a2f7-79df-45ad-bb60-de26fac15eaa
+      weight: 1
+    2a4f721d-1a5f-4e9d-89fa-9d7e7f859dc6:
+      id: 'views_block:em_featured_single_item_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: 2a4f721d-1a5f-4e9d-89fa-9d7e7f859dc6
+      weight: 1
+  id: panels_variant
+  uuid: 10e9fd1c-33aa-4bbe-afec-288d6f65ff00
+  label: null
+  weight: 0
+  layout: home_1_overlay_header
+  layout_settings: {  }
+  page_title: '3 Columns Grid'
+  storage_type: page_manager
+  storage_id: home_page_full_width-panels_variant-3
+  builder: ipe
+page: home_page_full_width
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /full-width/3-column-grid
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,23 @@
+uuid: a996221c-1e94-49b6-a55b-fc3e1869d218
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - custom_pub.custom_publishing_option.featured_item
+id: node.article.featured_item
+field_name: featured_item
+entity_type: node
+bundle: article
+label: 'Featured item'
+description: 'Featured items appears at the top of the page, either in a slider or in a hero section.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

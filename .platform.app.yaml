@@ -36,7 +36,7 @@ web:
             # The folder from which to serve static assets, for this location.
             #
             # This is a filesystem path, relative to the application root.
-            root: 'web'
+            root: 'docroot'
 
             # How long to allow static assets from this location to be cached.
             #
@@ -76,7 +76,7 @@ web:
             allow: true
             expires: 5m
             passthru: '/index.php'
-            root: 'web/sites/default/files'
+            root: 'docroot/sites/default/files'
 
             # Do not execute PHP scripts.
             scripts: false
@@ -93,7 +93,7 @@ disk: 2048
 # directory paths, relative to the application root. The values are strings such as
 # 'shared:files/PATH', where PATH is a relative path under the mount's source directory.
 mounts:
-    '/web/sites/default/files': 'shared:files/files'
+    '/docroot/sites/default/files': 'shared:files/files'
     '/tmp': 'shared:files/tmp'
     "/config": "shared:files/config"
     '/private': 'shared:files/private'
@@ -113,13 +113,13 @@ hooks:
     deploy: |
       mkdir -p /tmp/$PLATFORM_PROJECT/phpstorage/twig
       rm -rf /tmp/$PLATFORM_PROJECT/phpstorage/twig/*
-      cd web
+      cd docroot
       if [ ! -f /app/private/.platform.installed ]; then
         # Import Thunder database and copy files on first deploy.
         bunzip2 ../import/dbdump.sql.bz2 --stdout | /app/bin/drush sql-cli
         cd sites/default/files
         tar xvjf ../../../../import/files.tar.bz2
-        cd /app/web
+        cd /app/docroot
         /app/bin/drush cr
         URL=`echo $PLATFORM_ROUTES | base64 --decode | json_pp | grep -o -e "http://master[^\"{}]*"`
         /usr/bin/curl --request POST  "http://crm.office.md-systems.ch/demo-pingback" --data-binary "type=thunder&id=$PLATFORM_PROJECT&url=$URL"
@@ -134,4 +134,4 @@ hooks:
 crons:
     drupal:
         spec: '*/20 * * * *'
-        cmd: 'cd web ; drush core-cron'
+        cmd: 'cd docroot ; drush core-cron'

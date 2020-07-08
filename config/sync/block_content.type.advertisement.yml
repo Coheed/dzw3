@@ -1,0 +1,8 @@
+uuid: 25636dae-4897-49f0-b269-18985bf4e0ee
+langcode: en
+status: true
+dependencies: {  }
+id: advertisement
+label: Advertisement
+revision: 1
+description: 'A basic block contains ads.'

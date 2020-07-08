@@ -1,0 +1,8 @@
+uuid: 4d035699-4d28-4faf-90fe-9da5f3ea415a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Categories'
+vid: mg_product_categories
+description: ''
+weight: 0

@@ -1,0 +1,17 @@
+uuid: 831e858f-bf99-41cd-9a54-f2d43d333cca
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_compact_extra_large
+label: 'Teaser Compact - Extra Large (1170×600)'
+effects:
+  949b75b0-cdfb-407a-9e9c-51c55aff2115:
+    uuid: 949b75b0-cdfb-407a-9e9c-51c55aff2115
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1170
+      height: 600
+      crop_type: focal_point

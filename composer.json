@@ -1,5 +1,5 @@
 {
-    "name": "burdamagazinorg/thunder-project",
+    "name": "thunder/thunder-project",
     "description": "Project template for Thunder projects with composer",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -17,12 +17,12 @@
             "email": "mladen.todorovic@burda.com"
         },
         {
-            "name": "Timo Welde",
-            "email": "welde@galaniproject.de"
+            "name": "Alex Pott",
+            "email": "alex.a.pott@gmail.com"
         },
         {
             "name": "Volker Killesreiter",
-            "email": "killesreiter@burda.com"
+            "email": "volker.killesreiter@burda.com"
         }
     ],
     "repositories": [
@@ -35,59 +35,54 @@
             "url": "https://asset-packagist.org"
         },
         {
-            "type": "package",
-            "package": {
-                "name": "heiseonline/shariff",
-                "version": "3.0.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/heiseonline/shariff/releases/download/3.0.1/shariff-3.0.1.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "^1.2.0"
-                }
+          "type": "package",
+          "package": {
+            "name": "heiseonline/shariff",
+            "version": "3.0.1",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/heiseonline/shariff/releases/download/3.0.1/shariff-3.0.1.zip",
+                "type": "zip"
+            },
+            "require": {
+              "composer/installers": "^1.2.0"
             }
+          }
         },
         {
-            "type": "package",
-            "package": {
-                "name": "custom-asset/masonry",
-                "version": "3.3.2",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://npmcdn.com/masonry-layout@3.3.2/dist/masonry.pkgd.min.js",
-                    "type": "file"
-                },
-                "require": {
-                    "composer/installers": "^1.2.0"
-                }
+          "type": "package",
+          "package": {
+            "name": "custom-asset/masonry",
+            "version": "3.3.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://npmcdn.com/masonry-layout@3.3.2/dist/masonry.pkgd.min.js",
+                "type": "file"
+            },
+            "require": {
+              "composer/installers": "^1.2.0"
             }
+          }
         }
     ],
     "require": {
-        "burdamagazinorg/thunder": "~8.2",
-        "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal/core-composer-scaffold": "^8.8||^9.0",
         "drupal/console": "^1.2",
         "composer/installers": "^1.2",
-        "drush/drush": "~8.0|^9.0.0-beta8",
+        "drush/drush": "^9.0||^10.0",
+        "vlucas/phpdotenv": "^2.4",
         "oomphinc/composer-installers-extender": "^1.1",
+        "zaporylie/composer-drupal-optimizations": "^1.1",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
-        "drupal/devel": "^2.0",
-        "drupal/superfish": "^1.2",
-        "drupal/views_rss": "2.x-dev",
-        "drupal/webforms": "0.x-dev",
-        "drupal/dfp": "^1.0@alpha",
-        "drupal/fontawesome": "^2.9",
         "drupal/custom_pub": "^1.0@alpha",
         "drupal/field_formatter": "^1.2",
         "drupal/masonry": "^1.0@RC",
         "drupal/masonry_views": "^1.0@RC",
-        "drupal/page_manager": "^4.0@beta",
-        "drupal/panelizer": "^4.1",
-        "drupal/panels": "^4.3",
+        "drupal/page_manager": "^4.0",
+        "drupal/panelizer": "^4.2",
+        "drupal/panels": "^4.4",
         "drupal/poll": "^1.2",
         "drupal/realname": "^1.0@RC",
         "drupal/slick_views": "^1.0",
@@ -95,23 +90,25 @@
         "npm-asset/imagesloaded": "^4.1",
         "custom-asset/masonry": "^3.3",
         "heiseonline/shariff": "^3.0",
-        "drupal/tb_megamenu": "1.x-dev",
-        "drupal/config_delete": "^1.7",
-        "drupal/backup_migrate": "^4.0",
-        "drupal/ctools": "3.0.0"
+        "thunder/thunder-distribution": "^3.4",
+        "drupal/we_megamenu": "^1.9"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "^8.4"
+        "drupal/core-dev": "^8.8||^9.0"
     },
     "replace": {
-        "bower-asset/shariff": "*"
+      "npm-asset/shariff": "*"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "DrupalProject\\composer\\": "scripts/composer/"
-        }
+        },
+        "files": ["load.environment.php"]
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -129,31 +126,49 @@
         ]
     },
     "extra": {
-        "installer-types": ["npm-asset", "bower-asset"],
+        "composer-exit-on-patch-failure": true,
+        "installer-types": ["bower-asset", "npm-asset"],
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/masonry": ["custom-asset/masonry"],
-            "web/libraries/{$name}": [
+            "docroot/core": ["type:drupal-core"],
+            "docroot/libraries/masonry": ["custom-asset/masonry"],
+            "docroot/libraries/{$name}": [
                 "type:drupal-library",
-                "type:npm-asset",
-                "type:bower-asset"
+                "type:bower-asset",
+                "type:npm-asset"
             ],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
+      
         "patches": {
-            "drupal/page_manager": {
-                "2752227: Incorrect page_title title in browser toolbar": "https://www.drupal.org/files/issues/2018-10-26/page_manager-incorrect-page_title-2752227-37-8.x.4.x.patch"
-            },
-            "drupal/panels": {
-                "2869412: Page title does not display": "https://www.drupal.org/files/issues/2018-03-19/panels--page_title_does_not_display--2869412-27.patch"
-            }
+          "drupal/core": {
+            "2834346: Contextual links double trigger": "https://www.drupal.org/files/issues/2019-11-15/drupal-contextual_links_double_trigger-2834346-19.patch"
+          },
+          "drupal/page_manager": {
+            "2752227: Incorrect page_title title in browser toolbar": "https://www.drupal.org/files/issues/2018-10-26/page_manager-incorrect-page_title-2752227-37-8.x.4.x.patch"
+          },
+          "drupal/panels": {
+            "2869412: Page title does not display": "https://www.drupal.org/files/issues/2018-03-19/panels--page_title_does_not_display--2869412-27.patch",
+            "2824632: Changes to Layout not being saved": "https://www.drupal.org/files/issues/2018-08-28/panels-fix_updating_layout-2824632-16-D8.patch"
+          },
+          "drupal/poll": {
+            "2331515: Allow to show the poll question in the vote/result templates": "https://www.drupal.org/files/issues/2019-03-15/question-title-is-displayed-as-block-title-2923946-8.x-1.x-dev-7.patch"
+          },
+          "drupal/mailchimp": {
+            "2936099: Notice: Undefined property: stdClass::$size in mailchimp_insert_drupal_form_tag()": "https://www.drupal.org/files/issues/2018-06-07/suppress-size-notice-2936099-6.patch"
+          }
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot/"
+            }
+        }
     },
     "config": {
-        "bin-dir": "bin/"
+        "bin-dir": "bin/",
+        "sort-packages": true
     }
 }

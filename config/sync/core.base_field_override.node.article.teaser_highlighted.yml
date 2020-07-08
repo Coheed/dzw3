@@ -1,0 +1,23 @@
+uuid: a4c7f37c-4607-49d5-8583-300f52380e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - custom_pub.custom_publishing_option.teaser_highlighted
+id: node.article.teaser_highlighted
+field_name: teaser_highlighted
+entity_type: node
+bundle: article
+label: 'Teaser (Highlighted)'
+description: 'Use highlighted style teaser for this item.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

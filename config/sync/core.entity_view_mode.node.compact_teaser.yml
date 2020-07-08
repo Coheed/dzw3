@@ -1,0 +1,10 @@
+uuid: 2a7f1a5e-dfe6-4bae-91b8-aaba8d769a60
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.compact_teaser
+label: 'Compact teaser'
+targetEntityType: node
+cache: true

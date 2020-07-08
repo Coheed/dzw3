@@ -1,0 +1,45 @@
+name: 'EM Default Content'
+type: module
+description: 'Provide default content.'
+package: EM
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - better_normalizers:better_normalizers
+  - default_content:default_content
+default_content:
+  block_content:
+    - 7ba6c257-0ef4-4a6a-9a06-9e2e0d037790
+    - 31d1bec4-2573-4848-b5cd-6f6e2c7ee83b
+    - 7587ab1d-5a6f-45f4-bebe-f2055bcde7d7
+    - ae2d27a7-1a25-4d4e-b159-48fcb62cd52b
+  file:
+    - 4cc6b4b4-903f-415f-9ff7-e6c1b0299f1d
+  menu_link_content:
+    - a526e55f-9289-476c-9545-e511423d090b
+    - 7c8d45c9-0dbf-438b-80ff-18d0450f38b9
+    - 7827ec44-27a4-45f5-be61-327882cd010e
+    - 7823604f-22e5-4754-89c0-8d0d4b57a706
+    - 80aae597-9800-4a87-b9b1-e3591b27f5ae
+    - e040eec4-08da-4d2d-a5e4-d1fa20660840
+    - 62f7ef6e-6f79-4435-bf2b-bfe1012a750a
+    - c725c2f7-c198-49cf-ac45-7cf67e4cf6cc
+    - 5a11e711-f3b0-450e-97d9-f90f21c10689
+    - b5e9c16e-c694-4bab-b28d-1f6e67eeff37
+    - 57777c20-0d14-4001-8235-1c6ee02ba6e8
+    - 38b16884-1fc6-448f-a3d4-520860ea4fd0
+    - e3abbec0-37c5-4df3-b309-5a5c081488f1
+    - 1ccaea41-face-47a0-8b33-9906cc2d0f40
+    - ccacb9b3-e21d-410b-91ce-6d0d71bd826e
+    - 7196e996-8794-4969-82d7-6138f6829f8d
+    - 5662dc5b-edb0-4009-bc68-24bf8e93d509
+    - a580a9d1-a57b-4e4c-99bf-4350f0c18232
+    - db25dbd4-3c95-44cb-a88d-a266cfc94d8f
+    - 8b80251b-2f90-4e79-a98a-df193d234bc3
+    - 6c36fcba-8b18-47ec-bbe0-e71795ba8226
+    - f05701b9-b5ee-42bd-9bff-ae397b28c28d
+    - 1c283bf8-9cb3-4fb1-bae4-367dca7f441f
+    - 89657d96-4cb1-4fb8-ab63-277396b3c17e
+    - 70bfce36-5e32-45b4-9676-d10db8ef457e
+    - 3ca2c473-8274-411c-a05d-6fff315a9795
+    - 613670c6-ecab-4854-a995-b89a3bb8dd8d
+    - b3e080a6-2316-4e4c-a318-1f4e686b2e37

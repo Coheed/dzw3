@@ -1,0 +1,413 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/five-tips-low-cost-holidays?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_channel": [
+            {
+                "href": "http:\/\/default\/lifestyle?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_paragraphs": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_tags": [
+            {
+                "href": "http:\/\/default\/style?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/trends?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_teaser_media": [
+            {
+                "href": "http:\/\/default\/media\/1?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 3
+        }
+    ],
+    "uuid": [
+        {
+            "value": "599ba860-dc9b-4ade-9d76-5d9a9e89a51c"
+        }
+    ],
+    "vid": [
+        {
+            "value": 10
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "article"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2019-01-22T09:55:38+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4a0e5659-283c-4b17-b3ee-67d9598b37e5"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4a0e5659-283c-4b17-b3ee-67d9598b37e5"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_channel": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/lifestyle?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/channel"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e666cb65-03c6-4087-a90e-4bf2095b4c79"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_paragraphs": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "9176f5a9-5a8e-40c9-b386-9a89118ec42b"
+                    }
+                ],
+                "target_revision_id": "30"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/gallery"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "105a4a9c-c7db-412f-ad4b-859464810aab"
+                    }
+                ],
+                "target_revision_id": "31"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "18ff7026-21eb-41ed-95d1-5c10c6036b38"
+                    }
+                ],
+                "target_revision_id": "32"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d0dd7bf8-00ba-4d5c-b662-3e67af7205ad"
+                    }
+                ],
+                "target_revision_id": "33"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_tags": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/style?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/tags"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "221db391-48ac-4f9a-9bec-bc4cf48c961b"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/trends?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/tags"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "55392c43-c018-4c7c-b65f-602f98d14072"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_teaser_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "bb2c9c8f-a3df-4157-9ba0-68cc322e34bc"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Five Tips For Low Cost Holidays",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-01-22T09:51:56+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-01-22T09:55:38+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "moderation_state": [
+        {
+            "value": "published",
+            "lang": "en"
+        }
+    ],
+    "editors_picks": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "featured_item": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "teaser_featured": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "teaser_highlighted": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Five Tips For Low Cost Holidays",
+                "content_language": "en",
+                "twitter_cards_type": "summary_large_image",
+                "robots": "index, follow",
+                "og_site_name": "Drush Site-Install",
+                "og_type": "article",
+                "twitter_cards_description": "Nulla varius consectetur augue quis congue. Nulla commodo neque a nisi scelerisque hendrerit.",
+                "description": "Nulla varius consectetur augue quis congue. Nulla commodo neque a nisi scelerisque hendrerit.",
+                "og_title": "Five Tips For Low Cost Holidays",
+                "image_src": "",
+                "referrer": "no-referrer",
+                "og_description": "Nulla varius consectetur augue quis congue. Nulla commodo neque a nisi scelerisque hendrerit.",
+                "twitter_cards_image_width": "1024",
+                "twitter_cards_image_height": "512",
+                "twitter_cards_image": "http:\/\/default\/sites\/default\/files\/styles\/twitter\/public\/2019-01\/default-img_1.png?itok=y7CE-EHE",
+                "og_image_0": "http:\/\/default\/sites\/default\/files\/styles\/facebook\/public\/2019-01\/default-img_1.png?itok=j8xoiYko",
+                "og_image_type": "image\/png",
+                "og_image_width": "1200",
+                "og_image_height": "630",
+                "og_updated_time": "2019-01-22T10:55:38+0100"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/five-tips-low-cost-holidays",
+            "pid": 4,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "publish_state": [
+        {
+            "value": "_none",
+            "lang": "en"
+        }
+    ],
+    "unpublish_state": [
+        {
+            "value": "_none",
+            "lang": "en"
+        }
+    ],
+    "comment": [
+        {
+            "status": 2,
+            "cid": 0,
+            "last_comment_timestamp": 1548150938,
+            "last_comment_name": null,
+            "last_comment_uid": 1,
+            "comment_count": 0,
+            "lang": "en"
+        }
+    ],
+    "field_seo_title": [
+        {
+            "value": "Five Tips For Low Cost Holidays"
+        }
+    ],
+    "field_teaser_text": [
+        {
+            "value": "Nulla varius consectetur augue quis congue. Nulla commodo neque a nisi scelerisque hendrerit."
+        }
+    ],
+    "panelizer": [
+        {
+            "view_mode": "full",
+            "default": "layout_3",
+            "panels_display": [],
+            "lang": "en"
+        }
+    ]
+}

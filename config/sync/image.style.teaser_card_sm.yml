@@ -1,0 +1,17 @@
+uuid: 5116ae86-163f-4f49-aa7e-90b51186d36b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_card_sm
+label: 'Teaser Card (380×190)'
+effects:
+  49f9d13c-6d57-4f9b-998e-f6b466f5087c:
+    uuid: 49f9d13c-6d57-4f9b-998e-f6b466f5087c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 380
+      height: 190
+      crop_type: focal_point

@@ -1,0 +1,20 @@
+uuid: d2e90228-1fe4-4433-bbed-b6fc001bd5d8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - em_magazine
+_core:
+  default_config_hash: 11oTYTm5rF9OZAqTsKTvHSlQnF0vNGMAeIckFz8sHCA
+id: pagetitle
+theme: em_magazine
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

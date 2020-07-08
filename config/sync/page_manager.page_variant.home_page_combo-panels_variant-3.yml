@@ -1,0 +1,129 @@
+uuid: 9f60dfa2-fedf-456b-ab44-1b96f4ec1124
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_combo
+    - views.view.em_combo_example_2
+    - views.view.em_combo_example_3
+    - views.view.em_content_grid_1
+    - views.view.em_example_9
+    - views.view.em_popular_content
+  module:
+    - panels
+    - poll
+    - system
+    - views
+id: home_page_combo-panels_variant-3
+label: 'Combo 5'
+variant: panels_variant
+variant_settings:
+  blocks:
+    1f0f7072-44b2-42f6-8909-3a77b23186bc:
+      id: 'views_block:em_content_grid_1-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: featured
+      weight: 1
+      uuid: 1f0f7072-44b2-42f6-8909-3a77b23186bc
+      context_mapping: {  }
+    72f0fa69-9595-4f30-903e-5f754079a727:
+      id: poll_recent_block
+      label: Poll
+      provider: poll
+      label_display: visible
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: 72f0fa69-9595-4f30-903e-5f754079a727
+      weight: 2
+    859199e0-a92d-488d-9211-e8db952c96cf:
+      id: 'views_block:em_popular_content-block_3'
+      label: Popular
+      provider: views
+      label_display: visible
+      views_label: Popular
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: 859199e0-a92d-488d-9211-e8db952c96cf
+      weight: 1
+    b18e3746-f45b-48c4-9ae4-e540fc3ab1cc:
+      id: 'views_block:em_combo_example_3-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle
+      uuid: b18e3746-f45b-48c4-9ae4-e540fc3ab1cc
+      weight: 1
+    f59d72a9-09ed-4853-b466-bfba55c3b7a4:
+      id: 'views_block:em_example_9-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      pager_offset: 0
+      context_mapping: {  }
+      region: bottom_above_first
+      uuid: f59d72a9-09ed-4853-b466-bfba55c3b7a4
+      weight: 2
+    c2a86194-bbfb-4fda-a90b-1559c1665d08:
+      id: 'views_block:em_combo_example_2-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: bottom_above_first
+      uuid: c2a86194-bbfb-4fda-a90b-1559c1665d08
+      weight: 1
+    3b08cc26-85df-4051-a63e-526440d66955:
+      id: 'views_block:em_example_9-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: '4'
+      pager_offset: 0
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 3b08cc26-85df-4051-a63e-526440d66955
+      weight: 1
+    7e46cd45-95e2-4995-aab8-1bcbdbe2f864:
+      id: 'views_block:em_combo_example_2-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 7e46cd45-95e2-4995-aab8-1bcbdbe2f864
+      weight: 2
+  id: panels_variant
+  uuid: fc3c4cea-6d79-4b9f-96ae-ed316f0731f2
+  label: null
+  weight: 0
+  layout: home_1
+  layout_settings: {  }
+  page_title: 'Combo 5'
+  storage_type: page_manager
+  storage_id: home_page_combo-panels_variant-3
+  builder: ipe
+page: home_page_combo
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /combo/5
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

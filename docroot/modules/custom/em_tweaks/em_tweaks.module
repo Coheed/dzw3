@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Provides various tweaks for Drupal core or contributed modules
+ */
+
+/**
+ * Implements hook_layout_alter().
+ */
+function em_tweaks_layout_alter(&$definitions) {
+  $drupal_default_layouts = array(
+    'layout_onecol',
+    'layout_twocol',
+    'layout_twocol_bricks',
+    'layout_threecol_25_50_25',
+    'layout_threecol_33_34_33',
+  );
+
+  // Group default layouts in "Drupal Default" category.
+  foreach ($drupal_default_layouts as $layout) {
+    $definitions[$layout]->setCategory('Drupal Default');
+  }
+}

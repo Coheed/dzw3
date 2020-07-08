@@ -1,0 +1,10 @@
+uuid: ed9b7cc3-233c-4e0b-858a-4457ccfa9ae0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.large_parallax
+label: 'Large Parallax'
+targetEntityType: media
+cache: true

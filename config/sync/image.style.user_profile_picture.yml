@@ -1,0 +1,17 @@
+uuid: 62e2e5f8-6e78-49ed-90e4-f04e93afa611
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: user_profile_picture
+label: 'User profile picture'
+effects:
+  f6a0cf11-bb3b-4e9d-b3d1-26ac57b325d7:
+    uuid: f6a0cf11-bb3b-4e9d-b3d1-26ac57b325d7
+    id: focal_point_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      crop_type: focal_point

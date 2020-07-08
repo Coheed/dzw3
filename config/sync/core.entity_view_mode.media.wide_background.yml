@@ -1,0 +1,10 @@
+uuid: 15b526f5-373e-4799-b04c-ea9885462e58
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.wide_background
+label: 'Wide Background'
+targetEntityType: media
+cache: true

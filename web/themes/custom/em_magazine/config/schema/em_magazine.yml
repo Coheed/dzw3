@@ -1,5 +1,0 @@
-# Schema for the configuration files of the EM Magazine theme.
-
-em.settings:
-  type: theme_settings
-  label: 'EM Magazine settings'

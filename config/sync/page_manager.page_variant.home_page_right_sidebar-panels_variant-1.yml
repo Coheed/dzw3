@@ -1,0 +1,83 @@
+uuid: 5065e260-db35-4ec8-b82f-cb72e2239ff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_right_sidebar
+    - views.view.em_editors_picks
+    - views.view.em_example_10
+    - views.view.em_featured_center_mode_slider
+    - views.view.em_popular_content
+  module:
+    - panels
+    - system
+    - views
+id: home_page_right_sidebar-panels_variant-1
+label: '2 Columns Grid'
+variant: panels_variant
+variant_settings:
+  blocks:
+    3fc2ecb7-9a90-4f8b-bf2c-41ec3335cba8:
+      id: 'views_block:em_example_10-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 3fc2ecb7-9a90-4f8b-bf2c-41ec3335cba8
+      weight: 1
+    6a48c1ca-a4f0-4d35-9d98-a2758963fd97:
+      id: 'views_block:em_editors_picks-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: 6a48c1ca-a4f0-4d35-9d98-a2758963fd97
+      weight: 1
+    8aa62d78-34c4-47fa-b98d-69ec2dd57e8e:
+      id: 'views_block:em_popular_content-block_3'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: 8aa62d78-34c4-47fa-b98d-69ec2dd57e8e
+      weight: 1
+    6f9cc9e6-782f-4a70-b936-846acabf6131:
+      id: 'views_block:em_featured_center_mode_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: 6f9cc9e6-782f-4a70-b936-846acabf6131
+      weight: 1
+  id: panels_variant
+  uuid: 4fdaf814-9801-44ce-9f3e-9f583da6064a
+  label: null
+  weight: 0
+  layout: home_1
+  layout_settings: {  }
+  page_title: '2 Columns Grid'
+  storage_type: page_manager
+  storage_id: home_page_right_sidebar-panels_variant-1
+  builder: ipe
+page: home_page_right_sidebar
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /right-sidebar/two-columns-grid
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

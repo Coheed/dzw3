@@ -1,0 +1,24 @@
+uuid: 37cbb2c4-9d5d-492c-86fa-1e64df3b3096
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.teaser_compact
+    - image.style.teaser_compact_sm
+  theme:
+    - em
+id: compact_teaser
+label: 'Compact teaser (Default)'
+image_style_mappings:
+  -
+    breakpoint_id: em.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser_compact
+  -
+    breakpoint_id: em.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser_compact_sm
+breakpoint_group: em
+fallback_image_style: teaser_compact

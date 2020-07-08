@@ -1,0 +1,106 @@
+uuid: 546ed066-cac3-483d-a2ab-deaf4f89fa19
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_combo
+    - views.view.em_combo_example_2
+    - views.view.em_combo_example_3
+    - views.view.em_example_1
+    - views.view.em_featured_single_item_slider
+    - views.view.em_popular_content
+  module:
+    - panels
+    - system
+    - views
+id: home_page_combo-panels_variant-4
+label: 'Combo 4'
+variant: panels_variant
+variant_settings:
+  blocks:
+    4030fa8c-4211-42b6-b733-e3a03d8919d3:
+      id: 'views_block:em_combo_example_3-block_1'
+      label: Lifestyle
+      provider: views
+      label_display: visible
+      views_label: Lifestyle
+      items_per_page: none
+      context_mapping: {  }
+      region: middle
+      uuid: 4030fa8c-4211-42b6-b733-e3a03d8919d3
+      weight: 1
+    874db69a-43b2-433c-8134-3ac04fadf811:
+      id: 'views_block:em_combo_example_2-block_1'
+      label: Fashion
+      provider: views
+      label_display: visible
+      views_label: Fashion
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 874db69a-43b2-433c-8134-3ac04fadf811
+      weight: 1
+    1a91ab5e-29e4-4ccb-8362-2d15d32a0951:
+      id: 'views_block:em_combo_example_2-block_1'
+      label: 'Travel & Eat'
+      provider: views
+      label_display: visible
+      views_label: 'Travel & Eat'
+      items_per_page: none
+      context_mapping: {  }
+      region: bottom_above_first
+      uuid: 1a91ab5e-29e4-4ccb-8362-2d15d32a0951
+      weight: 1
+    b071f477-1e02-4b7a-a0c1-650b3aab1cfb:
+      id: 'views_block:em_featured_single_item_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: b071f477-1e02-4b7a-a0c1-650b3aab1cfb
+      weight: 1
+    0390d257-3d54-46da-8b8b-2471cfd30393:
+      id: 'views_block:em_popular_content-block_3'
+      label: Popular
+      provider: views
+      label_display: visible
+      views_label: Popular
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: 0390d257-3d54-46da-8b8b-2471cfd30393
+      weight: 1
+    94994b42-760c-46cb-9e8b-d370fb79ff58:
+      id: 'views_block:em_example_1-block_1'
+      label: Latest
+      provider: views
+      label_display: visible
+      views_label: Latest
+      items_per_page: none
+      context_mapping: {  }
+      region: bottom_above_first
+      uuid: 94994b42-760c-46cb-9e8b-d370fb79ff58
+      weight: 2
+  id: panels_variant
+  uuid: 0c5ea79b-965a-46a9-89d6-920b2b172e7d
+  label: null
+  weight: 0
+  layout: home_1_overlay_header
+  layout_settings: {  }
+  page_title: null
+  storage_type: page_manager
+  storage_id: home_page_combo-panels_variant-4
+  builder: ipe
+page: home_page_combo
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /combo/4
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

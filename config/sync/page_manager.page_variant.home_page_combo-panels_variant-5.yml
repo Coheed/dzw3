@@ -1,0 +1,142 @@
+uuid: 46fde78a-869c-4c48-b9d6-cf5a96998571
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_combo
+    - views.view.em_combo_example_1
+    - views.view.em_combo_example_2
+    - views.view.em_combo_example_3
+    - views.view.em_content_grid_3
+    - views.view.em_example_13
+    - views.view.em_example_14
+    - views.view.em_example_9
+    - views.view.em_popular_content
+  module:
+    - panels
+    - poll
+    - system
+    - views
+id: home_page_combo-panels_variant-5
+label: 'Combo 6'
+variant: panels_variant
+variant_settings:
+  blocks:
+    4daa8beb-edff-4515-8677-c9bb9c7991d5:
+      id: 'views_block:em_combo_example_2-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 4daa8beb-edff-4515-8677-c9bb9c7991d5
+      weight: 1
+    fc493ec6-9bb1-4c68-ac96-90c6bb08857c:
+      id: 'views_block:em_content_grid_3-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: fc493ec6-9bb1-4c68-ac96-90c6bb08857c
+      weight: 1
+    97fb0040-5fdf-48bc-ae87-ab1674a5fafd:
+      id: poll_recent_block
+      label: Poll
+      provider: poll
+      label_display: visible
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: 97fb0040-5fdf-48bc-ae87-ab1674a5fafd
+      weight: 1
+    c5eab071-67e6-47bd-8cfc-2fb4d01fee26:
+      id: 'views_block:em_combo_example_1-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle
+      uuid: c5eab071-67e6-47bd-8cfc-2fb4d01fee26
+      weight: 1
+    77ae8e1b-59a1-4567-a7a5-2300b25c76c2:
+      id: 'views_block:em_example_9-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      pager_offset: 0
+      context_mapping: {  }
+      region: bottom_above_first
+      uuid: 77ae8e1b-59a1-4567-a7a5-2300b25c76c2
+      weight: 1
+    6b96d870-78cc-4eca-9141-b93bbe614445:
+      id: 'views_block:em_example_13-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 6b96d870-78cc-4eca-9141-b93bbe614445
+      weight: 2
+    d9aa6ab0-ed59-404a-8f6c-ad022819d519:
+      id: 'views_block:em_popular_content-block_3'
+      label: Popular
+      provider: views
+      label_display: visible
+      views_label: Popular
+      items_per_page: none
+      context_mapping: {  }
+      region: bottom_above_second
+      uuid: d9aa6ab0-ed59-404a-8f6c-ad022819d519
+      weight: 1
+    e01f1415-6eac-4f63-9c10-3ac2abbb0022:
+      id: 'views_block:em_example_14-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: e01f1415-6eac-4f63-9c10-3ac2abbb0022
+      weight: 1
+    51809737-74da-4dc4-a24a-cefe2158a617:
+      id: 'views_block:em_combo_example_3-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle
+      uuid: 51809737-74da-4dc4-a24a-cefe2158a617
+      weight: 2
+  id: panels_variant
+  uuid: 9272fb39-ac5c-4658-a84f-25dc67c7ce87
+  label: null
+  weight: 0
+  layout: home_1
+  layout_settings: {  }
+  page_title: 'Combo 6'
+  storage_type: page_manager
+  storage_id: home_page_combo-panels_variant-5
+  builder: ipe
+page: home_page_combo
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /combo/6
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

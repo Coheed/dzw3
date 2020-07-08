@@ -1,0 +1,66 @@
+uuid: 59572cc2-93e7-4b31-bd4a-82a751cf3b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.compact_teaser_extra_large
+    - field.field.node.article.comment
+    - field.field.node.article.field_channel
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_seo_title
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_media
+    - field.field.node.article.field_teaser_text
+    - field.field.node.article.panelizer
+    - node.type.article
+  module:
+    - empty_fields
+    - field_formatter
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.article.compact_teaser_extra_large
+targetEntityType: node
+bundle: article
+mode: compact_teaser_extra_large
+content:
+  field_teaser_media:
+    weight: 0
+    label: hidden
+    settings:
+      field_name: field_image
+      label: hidden
+      type: responsive_image
+      settings:
+        responsive_image_style: compact_teaser_extra_large
+        image_link: ''
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: field_formatter_with_inline_settings
+    region: content
+  field_teaser_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  comment: true
+  content_moderation_control: true
+  field_channel: true
+  field_meta_tags: true
+  field_paragraphs: true
+  field_seo_title: true
+  field_tags: true
+  langcode: true
+  links: true
+  panelizer: true
+  shariff_field: true

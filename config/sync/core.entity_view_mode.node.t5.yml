@@ -1,0 +1,10 @@
+uuid: 190511e6-becb-46ba-aa47-4a0adc350894
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.t5
+label: 'Large teaser card'
+targetEntityType: node
+cache: true

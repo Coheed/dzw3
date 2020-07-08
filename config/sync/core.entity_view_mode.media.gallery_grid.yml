@@ -1,0 +1,10 @@
+uuid: 995ccad0-8ca5-463e-a717-84e239594465
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.gallery_grid
+label: 'Gallery Grid'
+targetEntityType: media
+cache: true

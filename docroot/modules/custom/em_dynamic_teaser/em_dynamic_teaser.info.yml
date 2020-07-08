@@ -1,0 +1,7 @@
+name: EM - Dynamic Teaser
+core_version_requirement: ^8.8 || ^9
+description: Provides a different view mode for teasers, depending on "Custom Publishing Options" criteria.
+package: EM
+type: module
+dependencies:
+  - custom_pub

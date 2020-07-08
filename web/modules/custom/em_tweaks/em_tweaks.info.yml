@@ -1,7 +1,0 @@
-name: EM Tweaks
-core: 8.x
-description: Provides various tweaks for Drupal core or contributed modules.
-package: EM
-type: module
-dependencies:
-  - custom_pub

@@ -1,0 +1,17 @@
+uuid: 27664479-7e54-497a-b5e6-88f0bb59669d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: t8
+label: 'Teaser Item - Large (440×440)'
+effects:
+  bc2fd8d7-4788-4fc0-aa66-8695bf701ce1:
+    uuid: bc2fd8d7-4788-4fc0-aa66-8695bf701ce1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 440
+      height: 440
+      crop_type: focal_point

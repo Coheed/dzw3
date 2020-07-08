@@ -1,0 +1,35 @@
+uuid: d81b5006-f665-4676-965b-f3720357e049
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 9okJ56D3i4cTVvxocPTVenJwu66_fSNOC_sVIuP9Qgw
+id: default
+label: Default
+description: ''
+matchers:
+  abb64004-44db-4254-8189-1a06a4b8c830:
+    uuid: abb64004-44db-4254-8189-1a06a4b8c830
+    id: 'entity:node'
+    weight: 0
+    settings:
+      bundles:
+        article: article
+      group_by_bundle: false
+      include_unpublished: false
+      metadata: '[node:author] | [node:created:medium]'
+      substitution_type: canonical
+      limit: 100
+  54dba6c0-a78b-4f93-8955-b083b930a2ff:
+    uuid: 54dba6c0-a78b-4f93-8955-b083b930a2ff
+    id: 'entity:media'
+    weight: 0
+    settings:
+      bundles:
+        image: image
+      group_by_bundle: true
+      metadata: '[media:field_caption]'
+      substitution_type: media
+      limit: 100

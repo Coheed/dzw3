@@ -1,0 +1,83 @@
+uuid: 4a120060-a663-4946-afa3-2d7523c0354d
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_right_sidebar
+    - views.view.em_editors_picks
+    - views.view.em_example_12
+    - views.view.em_featured_single_item_slider
+    - views.view.em_popular_content
+  module:
+    - panels
+    - system
+    - views
+id: home_page_right_sidebar-panels_variant-3
+label: 'Large Card'
+variant: panels_variant
+variant_settings:
+  blocks:
+    c5d7d08b-b920-488f-a4ea-6452b4316528:
+      id: 'views_block:em_editors_picks-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: c5d7d08b-b920-488f-a4ea-6452b4316528
+      weight: 1
+    fb9f3252-c04b-4ac4-87ff-636b968d8ffc:
+      id: 'views_block:em_popular_content-block_3'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: fb9f3252-c04b-4ac4-87ff-636b968d8ffc
+      weight: 1
+    7d50b995-2c18-4e71-8edd-4fee2aafe334:
+      id: 'views_block:em_example_12-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 7d50b995-2c18-4e71-8edd-4fee2aafe334
+      weight: 1
+    bd81f9c7-6e8f-41cd-89ff-699a43691973:
+      id: 'views_block:em_featured_single_item_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: bd81f9c7-6e8f-41cd-89ff-699a43691973
+      weight: 1
+  id: panels_variant
+  uuid: 69e7ccf7-21aa-4155-9933-fbd5c4376d3f
+  label: null
+  weight: 0
+  layout: home_1_overlay_header
+  layout_settings: {  }
+  page_title: 'Large Card'
+  storage_type: page_manager
+  storage_id: home_page_right_sidebar-panels_variant-3
+  builder: ipe
+page: home_page_right_sidebar
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /right-sidebar/large-card
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

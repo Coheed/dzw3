@@ -1,0 +1,15 @@
+uuid: 385e9659-23c9-4ec1-9768-3e97a49b5a5a
+langcode: en
+status: true
+dependencies: {  }
+name: product_teaser_image
+label: 'Product Teaser Image'
+effects:
+  89fc26a3-152b-42f6-bb00-f35e7b64885b:
+    uuid: 89fc26a3-152b-42f6-bb00-f35e7b64885b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 380
+      height: 380
+      anchor: center-center

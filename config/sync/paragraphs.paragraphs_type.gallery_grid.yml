@@ -1,0 +1,10 @@
+uuid: 800f9d1a-9de5-4f72-b6d4-bd4da1c2f6c3
+langcode: en
+status: true
+dependencies: {  }
+id: gallery_grid
+label: 'Gallery Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

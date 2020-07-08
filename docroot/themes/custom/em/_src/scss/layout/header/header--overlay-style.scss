@@ -1,0 +1,182 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+//
+// Featured slider offset
+//
+.layout-region--featured {
+  margin-top: $header-height * -1;
+  .slick .content-wrapper {
+    padding-top: $header-height/2;
+  }
+}
+
+//
+// Header
+//
+.header {
+  background-color: rgba(#202936, 0);
+  color: #FFF;
+  transition: background-color .5s ease;
+
+  // Show light logo version
+  //
+  .logo-light {  display: block;  }
+  .logo-dark {  display: none;  }
+
+  a, button {
+    color: #FFF;
+    &:hover {
+      color: rgba(#FFF, .7);
+    }
+  }
+}
+
+//
+// Header top
+//
+.header--top-wrapper {
+  background-color: transparent;
+  border-bottom-color: rgba(#FFF, .35)
+}
+
+//
+// Header bottom
+//
+.header--bottom-wrapper {
+  background-color: transparent;
+  border-bottom: none;
+  color: #FFF;
+}
+
+//
+// Social Icons
+//
+.header .social-menu a {
+  background-color: transparent;
+  border: transparent;;
+  color: #FFF;
+  &:hover {
+    border-color: #FFF;
+    background-color: #FFF;
+    color: $header-social-link-color;
+  }
+}
+
+//
+// Action menu
+//
+.header--action-menu li {
+  border-color: rgba(#FFF, .7);
+}
+
+//
+// Default Main Menu
+//
+.region-header-main-menu .menu > .menu-item > a {
+  color: #FFF;
+  &:hover {
+    color: rgba(#FFF, .7);
+  }
+}
+
+
+//
+// Superfish menu
+//
+ul.sf-menu > li > a {
+  color: #FFF;
+  &:hover {
+    color: rgba(#FFF, .7);
+  }
+}
+
+//
+// TB Megamenu
+//
+.header {
+  .tb-megamenu .caret {
+    border-top-color: $tb-menu-background-color;
+  }
+
+  .tb-megamenu .nav > li > a,
+  .tb-megamenu .nav > li > span.tb-megamenu-no-link {
+    color: #FFF;
+    &:hover {
+      background: transparent;
+      color: rgba(#FFF, .7);
+    }
+  }
+
+  .tb-megamenu .nav > li.dropdown > a:hover,
+  .tb-megamenu .nav > li.dropdown > span.tb-megamenu-no-link:hover,
+  .tb-megamenu .nav > li.dropdown.open > a,
+  .tb-megamenu .nav > li.dropdown.open > span.tb-megamenu-no-link {
+    background: $tb-menu-background-color;
+    color: $tb-menu-level-1-link-color-hover;
+    .caret {
+      border-top-color: $tb-menu-level-1-link-arrow-color!important;
+    }
+  }
+
+  .tb-megamenu .tb-megamenu-item.level-1.active-trail > a,
+  .tb-megamenu .tb-megamenu-item.level-1.active-trail > span.active-trail {
+    background-color: transparent;
+    color: #FFF;
+  }
+}
+
+// WE Megamenu
+//
+// Style for the first level of links.
+.header--bottom-wrapper:not(.header-stuck) {
+
+  .we-mega-menu-ul li.we-mega-menu-li {
+    &:hover {
+      background-color: $we-menu-level-2-link-active-background;
+      color: $we-menu-level-1-link-color-hover;
+    }
+
+    > a, > span {
+      &:hover {
+        color: $we-menu-level-1-link-color-hover;
+      }
+    }
+  }
+
+  .navbar-we-mega-menu.navbar .we-mega-menu-ul > li.we-mega-menu-li {
+    &.active-trail {
+      background-color: transparent;
+      color: $we-menu-level-1-link-color-hover;
+    }
+
+    > a, > span {
+      color: #FFF;
+      &:hover,
+      &.active-trail:hover {
+        background-color: transparent;
+        color: $we-menu-level-1-link-color-hover;
+      }
+    }
+
+    &[data-submenu="1"] {
+      > a, > span {
+        &:after {
+          border-top-color: #FFF;
+        }
+      }
+      &:hover,
+      &.active-trail:hover {
+        background-color: $we-submenu-bg-color;
+        > a, > span {
+          color: $we-menu-level-1-link-color-hover;
+          &:after {
+            border-top-color: $we-menu-level-1-link-color-hover;
+          }
+        }
+      }
+    }
+  }
+}

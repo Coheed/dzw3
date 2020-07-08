@@ -1,0 +1,84 @@
+//
+// Dependencies
+//
+@import "./../../dependencies";
+
+
+//
+// Shariff social buttons
+//
+.shariff {
+  ul {
+    display: flex;
+    max-width: none;
+    flex: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      flex: 1 1 auto;
+      margin: 0 10px 0;
+      font-family: $theme-secondary-font;
+      text-transform: capitalize;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    display: block;
+    padding: .6rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1rem;
+    white-space: nowrap;
+    svg, .fab {
+      margin-right: .5rem;
+    }
+    .share_text {
+      font-size: .85rem;
+    }
+  }
+  ul.theme-white li a {
+    border: 1px solid #fff;
+    color: #FFF;
+  }
+  ul.theme-grey li a {
+    border: 1px solid $gray-blue-900;
+    color: $gray-blue-900;
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  // White & Gray
+  //
+  ul.theme-white, ul.theme-grey {
+    @each $social-network, $color in $shariff-social-button--color {
+      li.#{$social-network} a:hover {
+        background-color: $color;
+        border-color: $color;
+      }
+    }
+  }
+
+  // Colored
+  //
+  ul.theme-colored {
+    @each $social-network, $color in $shariff-social-button--color {
+      li.#{$social-network} a {
+        background-color: $color;
+        border: 1px solid $color;
+        color: #FFF;
+        &:hover {
+          background-color: darken($color, 10%);
+        }
+      }
+    }
+  }
+}

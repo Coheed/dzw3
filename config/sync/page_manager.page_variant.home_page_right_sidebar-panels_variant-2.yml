@@ -1,0 +1,83 @@
+uuid: c56427bb-e8db-4b8c-ae4f-89baaf4e2610
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_right_sidebar
+    - views.view.em_editors_picks
+    - views.view.em_example_1
+    - views.view.em_featured_2_column_slider
+    - views.view.em_popular_content
+  module:
+    - panels
+    - system
+    - views
+id: home_page_right_sidebar-panels_variant-2
+label: List
+variant: panels_variant
+variant_settings:
+  blocks:
+    04523ad6-ff28-4319-8946-da8280b900c8:
+      id: 'views_block:em_featured_2_column_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: 04523ad6-ff28-4319-8946-da8280b900c8
+      weight: 1
+    83c65839-5254-40a4-869e-2ce959e0405e:
+      id: 'views_block:em_example_1-block_1'
+      label: Latest
+      provider: views
+      label_display: visible
+      views_label: Latest
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: 83c65839-5254-40a4-869e-2ce959e0405e
+      weight: 1
+    e833bc26-1287-4a5a-a4ae-ff2f12a30519:
+      id: 'views_block:em_editors_picks-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: top
+      uuid: e833bc26-1287-4a5a-a4ae-ff2f12a30519
+      weight: 1
+    97f6dee9-8db6-4487-9e96-f7ec57e7436f:
+      id: 'views_block:em_popular_content-block_3'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: 97f6dee9-8db6-4487-9e96-f7ec57e7436f
+      weight: 1
+  id: panels_variant
+  uuid: 45b70241-36e9-4f2a-83a7-5e2ad9f88528
+  label: null
+  weight: 0
+  layout: home_1
+  layout_settings: {  }
+  page_title: List
+  storage_type: page_manager
+  storage_id: home_page_right_sidebar-panels_variant-2
+  builder: ipe
+page: home_page_right_sidebar
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /right-sidebar/list
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

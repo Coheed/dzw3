@@ -1,0 +1,350 @@
+// =============================
+// General
+// =============================
+
+// Primary color
+$theme-primary-color: $purple-700!default;
+
+// Body
+$theme-body-background-color: #FFF !default;
+
+// Font color
+// ---------------------
+$theme-font-color: $gray-blue-900 !default; // deprecated
+$theme-text--color: rgba($gray-blue-900, .95) !default;
+
+$theme-font-color--light: rgba($gray-blue-900, .75) !default // deprecated;
+$theme-text--color--light: rgba($gray-blue-900, .75) !default
+
+$theme-font-color--lighter: rgba($gray-blue-900, .6) !default // deprecated;
+$theme-text--color--lighter: rgba($gray-blue-900, .6) !default
+
+$theme-font-color--lightest: rgba($gray-blue-900, .3) !default // deprecated;
+$theme-text--color--lightest: rgba($gray-blue-900, .3) !default
+
+// Links
+// ---------------------
+$theme-link-color:            #000;
+$theme-link-decoration:       none;
+$theme-link-hover-color:      rgba($theme-link-color, .7);
+$theme-link-hover-decoration: none;
+
+// Border color
+$theme-border-color: $gray-blue-100;
+
+
+// =============================
+// Typography
+// =============================
+$theme-primary-font: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif !default;
+$theme-secondary-font: 'Montserrat', sans-serif !default;
+
+// Base font family
+$theme-base-font: $theme-primary-font;
+
+// Heading font family
+$theme-headings-font: $theme-secondary-font;
+$theme-headings-color: $gray-blue-900;
+
+
+// =============================
+// Forms
+// =============================
+
+// Input fields and text area
+$input-border-color: $gray-blue-200!default;
+$input-border-radius: 30px;
+
+// Input fields and text area :focus/:active
+$input-border-color--active: rgba($gray-blue-900, .8) !default;
+
+// Button
+$button-border-radius: $input-border-radius;
+
+
+// =============================
+// Drupal tabs
+// =============================
+$tabs-sd-bg-color: $gray-blue-50 !default;
+$tabs-sd-active-width: 80% !default;
+$tabs-sd-height: 40px !default;
+
+
+// =============================
+// Header
+// =============================
+
+$header-bg-color: #FFF !default;
+$header-borders-color: $gray-blue-50 !default; // Border separators inside the header
+$header-text-color: $gray-blue-900 !default;
+$header-link-color: $gray-blue-900 !default;
+$header-link-color-hover: rgba($gray-blue-900, .7) !default;
+
+// Header top
+$header-top-bg-color: $header-bg-color !default;
+$header-top-text-color: $header-text-color !default;
+$header-top-link-color: $header-link-color !default;
+$header-top-link-color-hover: $header-link-color-hover !default;
+$header-top-border-bottom: 1px solid $header-borders-color !default;
+
+// Header bottom
+$header-bottom-bg-color: $header-bg-color !default;
+$header-padding-top: 15px !default;
+$header-padding-bottoom: $header-padding-top !default;
+$header-bottom-border-top: none;
+$header-bottom-border-bottom: 1px solid $header-borders-color !default;
+
+// Header social icons
+$header-social-link-color: $header-link-color;
+$header-social-link-hover-color: #FFF;
+$header-social-link-background-color: transparent;
+$header-social-link-hover-background-color: $header-link-color;
+
+// Header action menu
+$header-action-menu-borders-color: $gray-blue-200;
+
+
+  // Overflow Header
+  // =============================
+
+  // This variable representing header height and it is used for
+  // adjusting the negative offset on elements on the Overflow Header.
+  $header-height: 130px;
+
+
+// =============================
+// Header Main Menu
+// =============================
+$header-main-menu-font-size: .778rem !default;
+$header-main-menu-font-weight: 900  !default;
+
+
+// =============================
+// Superfish Header Menu
+// =============================
+
+// Superfish Level 1
+$sf-level-1-bg-color: transparent !default;
+$sf-level-1-bg-hover-color: rgba($gray-blue-900, .9) !default;
+$sf-level-1-link-color: $header-link-color !default;
+$sf-level-1-link-color-hover: $header-link-color-hover !default;
+$sf-level-1-link-color-active: #FFF !default;
+$sf-level-1-link-arrow-down-color: $sf-level-1-link-color !default;
+$sf-level-1-font-size: $header-main-menu-font-size !default;
+$sf-level-1-font-weight: $header-main-menu-font-weight !default;
+$sf-level-1-text-transform: uppercase !default;
+
+// Superfish Level 2+
+$sf-level-2-bg-color: $sf-level-1-bg-hover-color !default;
+$sf-level-2-bg-color-hover:  lighten($sf-level-2-bg-color, 5%) !default;
+$sf-level-2-link-color: rgba(#FFF, .8) !default;
+$sf-level-2-link-color-hover: #FFF !default;
+$sf-level-2-link-border-bottom: 1px solid lighten($sf-level-2-bg-color, 3%) !default;
+$sf-level-2-link-arrow-down-color: $sf-level-2-link-color !default;
+$sf-level-2-font-size: $sf-level-1-font-size !default;
+$sf-level-2-font-weight: normal !default;
+$sf-level-2-text-transform: none;
+
+
+// =============================
+// TB Megamenu
+// =============================
+
+$tb-menu-background-color: rgba(#FFF, .9);
+
+// TB Megamenu Level 1
+$tb-menu-level-1-font-size: $header-main-menu-font-size !default;
+$tb-menu-level-1-font-weight: $header-main-menu-font-weight !default;
+$tb-menu-level-1-text-transform: uppercase !default;
+
+$tb-menu-level-1-link-color: $header-link-color !default;
+$tb-menu-level-1-link-color-hover: $tb-menu-level-1-link-color !default;
+$tb-menu-level-1-link-hover-background: $gray-50 !default;
+$tb-menu-level-1-link-arrow-color: $tb-menu-level-1-link-color !default;
+
+$tb-menu-level-1-link-active-background: $gray-100!default;
+$tb-menu-level-1-link-active-color: $tb-menu-level-1-link-color !default;
+
+// TB Megamenu Level 2+
+$tb-menu-level-2-font-size: $tb-menu-level-1-font-size !default;
+$tb-menu-level-2-font-weight: normal !default;
+$tb-menu-level-2-text-transform: none;
+$tb-menu-level-2-link-border-bottom: 1px solid $gray-blue-50;
+
+$tb-menu-level-2-link-color: $tb-menu-level-1-link-color !default;
+$tb-menu-level-2-link-hover-color: rgba($tb-menu-level-2-link-color, .8) !default;
+$tb-menu-level-2-hover-background: rgba($gray-blue-100, .5);
+$tb-menu-level-2-link-arrow-color: $tb-menu-level-2-link-color !default;
+
+$tb-menu-level-2-link-active-background: $gray-blue-50;
+$tb-menu-level-2-link-active-color: $tb-menu-level-2-link-color;
+
+
+// =============================
+// WE Mega Menu
+// =============================
+$we-submenu-min-width: 170px !default;
+$we-submenu-bg-color: rgba(#FFF, .9) !default;
+
+// Level 1
+$we-menu-level-1-font-size: $tb-menu-level-1-font-size !default;
+$we-menu-level-1-font-weight: $tb-menu-level-1-font-weight !default;
+$we-menu-level-1-text-transform: $tb-menu-level-1-text-transform !default;
+$we-menu-level-1-link-color: $tb-menu-level-1-link-color !default;
+$we-menu-level-1-link-color-hover: $we-menu-level-1-link-color !default;
+$we-menu-level-1-link-hover-background: $tb-menu-level-1-link-hover-background !default;
+$we-menu-level-1-link-active-color: $tb-menu-level-1-link-active-color !default
+$we-menu-level-1-link-active-background: $tb-menu-level-1-link-active-background !default;
+$we-menu-level-1-link-arrow-color: $we-menu-level-1-link-color !default;
+
+$we-menu-level-2-link-border-bottom: $tb-menu-level-2-link-border-bottom !default;
+$we-menu-level-2-font-size: $tb-menu-level-2-font-size !default;
+$we-menu-level-2-font-weight: $tb-menu-level-2-font-weight !default;
+$we-menu-level-2-text-transform: $tb-menu-level-2-text-transform !default;
+$we-menu-level-2-link-active-background: $gray-blue-50;
+$we-menu-level-2-link-active-color: $tb-menu-level-2-link-color;
+
+
+// =============================
+// Commerce Cat Block
+// =============================
+$commerce-cart-block-bg-color: rgba($gray-blue-900, .7) !default;
+
+
+// =============================
+// OFF CANVAS MENU
+// =============================
+
+$sidebar-width-sm: 330px;
+$sidebar-width-neg-sm: -$sidebar-width-sm;
+
+$sidebar-width-lg: 400px;
+$sidebar-width-neg-lg: -$sidebar-width-lg;
+
+$sidr-background: #FFF;
+$sidr-shadow: 5px 0 10px 0 rgba($gray-blue-900, .3) inset ;
+$sidr-box-shadow-color: #FFF;
+$sidr-input-background-color: #FFF;
+
+$sidr-font-size: .9rem;
+$sidr-text-color: $theme-font-color;
+
+// Menu Level 1
+$sidr-menu-level1-link-bg: #FFF;
+$sidr-menu-level1-border-bottom: 1px solid transparentize($theme-font-color, .8);
+$sidr-menu-level1-link-text-color: $theme-font-color;
+$sidr-menu-level1-link-text-hover-color: #000;
+
+// Menu Level 2
+$sidr-menu-level2-link-bg: #FFF;
+$sidr-menu-level2-border-bottom: $sidr-menu-level1-border-bottom;
+$sidr-menu-level2-link-text-color: $sidr-menu-level1-link-text-color;
+$sidr-menu-level2-link-text-hover-color: $gray-blue-300;
+
+
+
+// =============================
+// SLICK CAROUSEL
+// =============================
+
+$direction-button-bg-color: transparent;
+$direction-button-font-color: #FFF;
+$direction-button-width: 65px;
+$direction-button-height: $direction-button-width;
+$direction-button-border: 1px solid #FFF !default;
+$direction-button-border-radius: 50%;
+
+
+// =============================
+// Shariff sharing buttons
+// =============================
+
+$shariff-social-button--color: (
+    twitter: #1DA1F2,
+    facebook: #3b5998,
+    googleplus: #1DA1F2,
+    linkedin: #0077B5,
+    pinterest: #BD081C,
+    tumblr: #2C4762,
+    mail: $blue-light
+);
+
+
+// =============================
+// TEASER
+// =============================
+
+$teaser__is--highlighted--bg-color: $gray-100;
+$teaser__bordered--border: 1px solid $gray-blue-50 !default;
+
+// Teaser Headline
+$teaser__headline--link-color: $gray-900;
+$teaser__headline--link-hover: rgba($gray-900, .8);
+
+// Teaser Channel
+$teaser__channel--boxed--bg-color: $theme-primary-color;
+$teaser__channel--boxed--color: #FFF;
+
+// Authored info
+$teaser__authored--color: $theme-text--color;
+$teaser__authored--link-color: $theme-text--color--lighter;
+$teaser__authored--link-hover: $teaser__authored--link-color;
+
+// Teaser Body
+$teaser__body--color: $theme-text--color--light;
+
+// Compact Teaser
+// ---------------
+$teaser__compact--sm--min-height: 32rem; // small displays
+$teaser__compact--min-height: 28.8889rem;
+$teaser__compact--overlay-color: rgba(darken($gray-blue-900, 10%), .35) !default;
+$teaser--compact--is--highlighted--bg-color: $theme-primary-color !default;
+
+// Large Compact Teaser
+// -----------------------
+$teaser__compact--large--sm--min-height: 32rem; // small displays
+$teaser__compact--large--min-height: 50vh;
+
+
+// =============================
+// Article
+// =============================
+
+// Article <p>
+// ---------------------
+$article-font-size: 1rem;
+$article-line-height: 1.8rem;
+$article-p-tag-margin: 0rem 0 1.8rem;
+
+// Article "lead" style
+// ---------------------
+$article-lead-font-size: 1.25rem;
+$article-lead-line-height: 2rem;
+
+// Article links style
+// ----------------------
+$article-link-color:            $theme-primary-color;
+$article-link-decoration:       underline;
+$article-link-hover-color:      rgba($article-link-color, .7);
+$article-link-hover-decoration: underline;
+
+
+// =====================
+// Comments
+// =====================
+
+// Wrapper element color
+$comments__boxed-background-color: $gray-50;
+// User info line
+$comments__user-info-border--left: 3px solid $purple-200 !default;
+// User name color
+$comments__user-name-color: $gray-blue-900;
+// Comment text color
+$comments__comment-text-color: $theme-font-color--light;
+
+
+// =============================
+// VIEWS
+// =============================
+
+$card-columns-margin-bottom: 1.66rem;

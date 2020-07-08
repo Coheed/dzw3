@@ -1,0 +1,7 @@
+uuid: 9a11405b-fcd4-49fe-a1ce-7f5e5de33f29
+langcode: en
+status: true
+dependencies: {  }
+id: featured_item
+label: 'Featured item'
+description: 'Featured items appears at the top of the page, either in a slider or in a hero section.'

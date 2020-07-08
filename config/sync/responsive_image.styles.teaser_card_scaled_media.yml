@@ -1,0 +1,24 @@
+uuid: 42e6b384-c9fd-4b8b-87bb-b44e291d8d47
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.t10
+    - image.style.teaser_card_sm
+  theme:
+    - em
+id: teaser_card_scaled_media
+label: 'Teaser card (scaled media)'
+image_style_mappings:
+  -
+    breakpoint_id: em.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: t10
+  -
+    breakpoint_id: em.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser_card_sm
+breakpoint_group: em
+fallback_image_style: t10

@@ -1,0 +1,95 @@
+uuid: 35ed0332-9551-44f6-a5e3-3a361fc9b963
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_combo
+    - views.view.em_combo_example_1
+    - views.view.em_combo_example_2
+    - views.view.em_example_6
+    - views.view.em_featured_single_item_slider
+    - views.view.em_popular_content
+  module:
+    - panels
+    - system
+    - views
+id: home_page_combo-panels_variant-1
+label: 'Combo 2'
+variant: panels_variant
+variant_settings:
+  blocks:
+    a5c3e117-183a-4a35-b7a6-854fae43dd95:
+      id: 'views_block:em_combo_example_2-block_1'
+      label: 'Travel & Eat'
+      provider: views
+      label_display: visible
+      views_label: 'Travel & Eat'
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_first
+      uuid: a5c3e117-183a-4a35-b7a6-854fae43dd95
+      weight: 1
+    67a12216-dbe1-40db-99d3-4dc3092c8f63:
+      id: 'views_block:em_popular_content-block_3'
+      label: Popular
+      provider: views
+      label_display: visible
+      views_label: Popular
+      items_per_page: none
+      context_mapping: {  }
+      region: middle_above_second
+      uuid: 67a12216-dbe1-40db-99d3-4dc3092c8f63
+      weight: 1
+    147ebb69-13aa-42c9-8010-4ea3f134d825:
+      id: 'views_block:em_combo_example_1-block_1'
+      label: 'Things We Love'
+      provider: views
+      label_display: visible
+      views_label: 'Things We Love'
+      items_per_page: none
+      context_mapping: {  }
+      region: middle
+      uuid: 147ebb69-13aa-42c9-8010-4ea3f134d825
+      weight: 1
+    4fe4d5b0-137e-4782-847f-38f5aec4602e:
+      id: 'views_block:em_featured_single_item_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: 4fe4d5b0-137e-4782-847f-38f5aec4602e
+      weight: 1
+    a4f3cd03-d9da-4c24-a684-80b5ecee8fed:
+      id: 'views_block:em_example_6-block_1'
+      label: 'Do not miss'
+      provider: views
+      label_display: visible
+      views_label: 'Do not miss'
+      items_per_page: none
+      context_mapping: {  }
+      region: bottom_above_first
+      uuid: a4f3cd03-d9da-4c24-a684-80b5ecee8fed
+      weight: 1
+  id: panels_variant
+  uuid: a4f2dc03-dd34-44d8-aade-31e6ec5f17a9
+  label: null
+  weight: 0
+  layout: home_1_overlay_header
+  layout_settings: {  }
+  page_title: 'Combo 2'
+  storage_type: page_manager
+  storage_id: home_page_combo-panels_variant-1
+  builder: ipe
+page: home_page_combo
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /combo/2
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

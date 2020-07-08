@@ -1,0 +1,22 @@
+<?php
+
+function em_dynamic_teaser_entity_view_mode_alter(&$view_mode, Drupal\Core\Entity\EntityInterface $entity, $context) {
+
+  if ($entity->getEntityTypeId() == 'node' && $view_mode == 'teaser') {
+    if($entity->hasField('teaser_featured') && $entity->get('teaser_featured')->getString()) {
+
+      $entity_type_id = $entity->getEntityTypeId();
+      $bundle = $entity->bundle();
+      $display_repository = \Drupal::service('entity_display.repository');
+
+      // Get all view modes for this specific bundle
+      $available_view_modes =  $display_repository->getViewModeOptionsByBundle($entity_type_id, $bundle);
+
+      // Use the "compact_teaser" view mode if exist, otherwise use the old t2 view mode.
+      $view_mode = (array_key_exists('compact_teaser', $available_view_modes)) ? 'compact_teaser' : 't2';
+    }
+    else {
+      $view_mode = 't3';
+    }
+  }
+}

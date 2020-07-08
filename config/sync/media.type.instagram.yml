@@ -1,0 +1,26 @@
+uuid: 02f2d337-a0b8-44ae-996b-75135c9c3b8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_entity_instagram
+    - media_expire
+third_party_settings:
+  crop:
+    image_field: null
+  media_expire:
+    enable_expiring: null
+    expire_field: null
+    fallback_media: null
+_core:
+  default_config_hash: FdCzTC7WhAq_OeNxRbGH2N3KcilRhF97W9HDIfQC8lk
+id: instagram
+label: Instagram
+description: ''
+source: instagram
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_url
+field_map: {  }

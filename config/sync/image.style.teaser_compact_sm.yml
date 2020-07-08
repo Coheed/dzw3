@@ -1,0 +1,17 @@
+uuid: eedb18a1-27e7-4642-a904-e0060af1e6ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_compact_sm
+label: 'Teaser Compact (For small devices)'
+effects:
+  33613bba-9da4-4e46-817e-41b01d8ec749:
+    uuid: 33613bba-9da4-4e46-817e-41b01d8ec749
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 420
+      height: 420
+      crop_type: focal_point

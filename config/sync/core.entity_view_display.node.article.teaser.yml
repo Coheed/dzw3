@@ -1,0 +1,106 @@
+uuid: dabe902c-f0bd-481d-b101-7f55d71834b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.comment
+    - field.field.node.article.field_channel
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_seo_title
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_media
+    - field.field.node.article.field_teaser_text
+    - field.field.node.article.panelizer
+    - node.type.article
+  module:
+    - field_formatter
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_channel:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_teaser_media:
+    type: field_formatter_with_inline_settings
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      field_name: field_image
+      label: hidden
+      type: blazy
+      settings:
+        image_style: large
+        thumbnail_style: ''
+        media_switch: ''
+        box_style: ''
+        box_caption: ''
+        box_caption_custom: ''
+        ratio: ''
+        sizes: ''
+        breakpoints:
+          xs:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+          sm:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+          md:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+          lg:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+          xl:
+            image_style: ''
+            width: ''
+            breakpoint: ''
+        current_view_mode: _custom
+        background: false
+        caption:
+          title: '0'
+          alt: '0'
+    third_party_settings: {  }
+  field_teaser_text:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment: true
+  field_meta_tags: true
+  field_paragraphs: true
+  field_seo_title: true
+  field_tags: true
+  langcode: true
+  links: true
+  panelizer: true
+  shariff_field: true

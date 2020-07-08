@@ -1,0 +1,10 @@
+uuid: 5096dabc-6e68-47c7-a42c-98d7fea9fc4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.t9
+label: 'Small teaser list'
+targetEntityType: node
+cache: true

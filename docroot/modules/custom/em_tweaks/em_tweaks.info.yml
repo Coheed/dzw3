@@ -1,0 +1,5 @@
+name: EM Tweaks
+core_version_requirement: ^8.8 || ^9
+description: Provides various tweaks for Drupal core or contributed modules.
+package: EM
+type: module

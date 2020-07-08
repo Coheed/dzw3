@@ -1,0 +1,22 @@
+uuid: 33a6606f-2d4d-4002-a299-0ba11b619b22
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - em_magazine
+_core:
+  default_config_hash: XjPp3wJbq68V02i_g7eR6SvCVsCs7DeUFNevRrba78s
+id: mainpagecontent
+theme: em_magazine
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

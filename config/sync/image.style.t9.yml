@@ -1,0 +1,17 @@
+uuid: 0547a5f8-2921-4285-b990-d25f64d8c990
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: t9
+label: 'Teaser Item - Small (100×100)'
+effects:
+  f7570811-e632-486b-91ad-48402e155031:
+    uuid: f7570811-e632-486b-91ad-48402e155031
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      crop_type: focal_point

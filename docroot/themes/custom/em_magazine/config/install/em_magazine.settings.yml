@@ -1,0 +1,37 @@
+# General Settings
+pd_scroll_to_top: 1
+pd_sticky_sidebars: 1
+
+# Logo image
+pd_logo_light: 'themes/custom/em_magazine/branding/logo-light.svg'
+pd_logo_dark: 'themes/custom/em_magazine/branding/logo-dark.svg'
+
+# Social Media Pages
+pd_facebook: 'https://www.facebook.com/'
+pd_twitter: 'https://twitter.com/'
+
+# Header
+pd_sticky_header: 1
+pd_show_cart_button: 1
+pd_show_search_button: 1
+pd_show_hamburger_menu: 1
+
+# Search Settings
+pd_search_button_text: 'Go'
+pd_search_field_placeholder_text: 'Search for...'
+
+# Teaser
+pd_teaser_uppercase_title: 1
+pd_teaser_show_author_info: 1
+pd_teaser_show_post_date: 1
+pd_teaser_date_format: 'short'
+
+# Mailchimp
+pd_mailchimp_signup_headline: ''
+pd_mailchimp_signup_text: ''
+
+# Advanced Settings
+pd_additional_css: ''
+pd_custom_css_file: 0
+pd_additional_head_javascript: ''
+pd_additional_body_javascript: ''

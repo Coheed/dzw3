@@ -1,0 +1,26 @@
+uuid: c655ea72-6cf8-499c-9b2f-1369c52f5acc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.twitter.field_media
+    - paragraphs.paragraphs_type.twitter
+_core:
+  default_config_hash: SHmCDIxwwGfQU4taDAiqZLBKbqPDS6puhYLq2yKDHUM
+id: paragraph.twitter.default
+targetEntityType: paragraph
+bundle: twitter
+mode: default
+content:
+  field_media:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  uid: true

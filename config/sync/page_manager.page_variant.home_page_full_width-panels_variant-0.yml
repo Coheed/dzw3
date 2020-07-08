@@ -1,0 +1,60 @@
+uuid: e4e1711d-56e7-43e1-bd5d-e8a2b9ccc759
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_full_width
+    - views.view.em_example_9
+    - views.view.em_featured_single_item_slider
+  module:
+    - panels
+    - system
+    - views
+id: home_page_full_width-panels_variant-0
+label: '2 Columns Masonry'
+variant: panels_variant
+variant_settings:
+  blocks:
+    88bc9e40-8c6d-4a52-b64d-11bb7ce62583:
+      id: 'views_block:em_featured_single_item_slider-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: featured
+      uuid: 88bc9e40-8c6d-4a52-b64d-11bb7ce62583
+      weight: 1
+    58ef8133-3d17-4f51-9200-4f1b0f91f866:
+      id: 'views_block:em_example_9-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      pager_offset: 0
+      context_mapping: {  }
+      region: middle
+      uuid: 58ef8133-3d17-4f51-9200-4f1b0f91f866
+      weight: 1
+  id: panels_variant
+  uuid: 8c13c286-6d79-4590-a121-45b2d82dbe8d
+  label: null
+  weight: 0
+  layout: home_1_overlay_header
+  layout_settings: {  }
+  page_title: null
+  storage_type: page_manager
+  storage_id: home_page_full_width-panels_variant-0
+  builder: ipe
+page: home_page_full_width
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /full-width/2-column-masonry
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

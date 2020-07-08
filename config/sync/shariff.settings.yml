@@ -1,0 +1,19 @@
+shariff_css: naked
+shariff_theme: white
+shariff_orientation: horizontal
+shariff_services:
+  twitter: twitter
+  facebook: facebook
+shariff_twitter_via: ''
+shariff_mail_url: 'mailto:'
+shariff_mail_subject: ''
+shariff_mail_body: ''
+shariff_referrer_track: ''
+shariff_backend_url: ''
+shariff_flattr_category: ''
+shariff_flattr_user: ''
+shariff_media_url: ''
+actions: null
+form_build_id: form-csgyfBnM6jRQMIsuo2w5eHWQhYicezyd-EE0MFTDt-Y
+form_token: '-qUCpj40IeCteSCj3NwO1OzfXPuZP91sifK7D9-igIA'
+form_id: shariff_settings_form

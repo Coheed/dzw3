@@ -1,0 +1,25 @@
+uuid: 97f579c4-9c4b-424c-8de3-8984047115f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.t10
+    - image.style.t7
+    - image.style.teaser_item_sm
+  theme:
+    - em
+id: teaser_list
+label: 'Teaser list'
+image_style_mappings:
+  -
+    breakpoint_id: em.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: t7
+  -
+    breakpoint_id: em.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser_item_sm
+breakpoint_group: em
+fallback_image_style: t10

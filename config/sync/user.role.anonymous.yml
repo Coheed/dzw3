@@ -1,0 +1,21 @@
+uuid: 0c06e3d2-0be4-4266-b737-ad8ad52d0235
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YNwZhabAcFeIPfZsXVuj6z69TPmgR4FXmT9Ue9x2gXg
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access polls'
+  - 'access user profiles'
+  - 'access_unpublished node article'
+  - 'opt-in or out of tracking'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view published terms in channel'
+  - 'view published terms in tags'

@@ -1,0 +1,21 @@
+uuid: e0417fcd-be61-4759-8ddf-687681677011
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_source
+    - media.type.image
+_core:
+  default_config_hash: sMDrKYEzl4rvR2fzuVP4z-Nn3bYVQn-4sLku24Lvluw
+id: media.image.field_source
+field_name: field_source
+entity_type: media
+bundle: image
+label: Source
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

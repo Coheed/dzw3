@@ -1,0 +1,10 @@
+uuid: fa28f6e6-b04b-4263-a0a2-b66d34a46645
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.t3
+label: 'Teaser card (scaled media)'
+targetEntityType: node
+cache: true

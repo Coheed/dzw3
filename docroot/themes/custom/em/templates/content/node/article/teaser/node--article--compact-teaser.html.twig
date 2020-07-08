@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ * Teaser Style: Compact Extra Large
+ */
+#}
+
+{%
+  set article_classes =
+  [
+    'teaser',
+    'teaser--compact',
+    node.teaser_highlighted.getString() ? 'is--highlighted',
+  ]
+%}
+
+
+{# Teaser Markup #}
+{# ============= #}
+<article{{ attributes.addClass(article_classes) }}>
+  <a class="teaser__link" href="{{ url }}">{{ 'Read more'|t }}</a>
+
+  {# == Teaser media wrapper == #}
+  {# ========================== #}
+  <div class="teaser__media">
+    {% if pd.article.media_contained.html %}
+      <div class="teaser__media-icons">
+        {{ pd.article.media_contained.html|raw }}
+      </div>
+    {% endif %}
+
+    <div class="image teaser__image">
+      {{ content.field_teaser_media }}
+    </div>
+  </div>
+
+  {# == Teaser content wrapper == #}
+  {# ============================ #}
+  <div{{ content_attributes.addClass('teaser__content') }}>
+
+    {# == Teaser title == #}
+    {# ================== #}
+    <header>
+      {% if content.field_channel.0 %}
+        <div class="channel channel--bordered teaser__channel">
+          {{ content.field_channel }}
+        </div>
+      {% endif %}
+
+      <h2 class="teaser__headline">
+        <a href="{{ url }}">{{ label }}</a>
+      </h2>
+    </header>
+
+    {# == Meta (author info) == #}
+    {# ======================== #}
+    <footer class="teaser__authored">
+      {% if pd.teaser.show_post_date %}
+        <span class="date">{{ date }}</span>
+      {% endif %}
+
+      {% if pd.teaser.show_author_info %}
+        , <span class="author">{{ 'by'|t }} {{ author_name }}</span>
+      {% endif %}
+    </footer>
+
+    {{ content|without('field_teaser_media','field_channel') }}
+  </div>
+</article>

@@ -1,0 +1,17 @@
+uuid: c47e4183-42d1-4e02-8ef2-54cab66a6d9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_item_sm
+label: 'Teaser Item (140×190)'
+effects:
+  b19294c4-429e-4c64-aefc-7497bb0fb5f8:
+    uuid: b19294c4-429e-4c64-aefc-7497bb0fb5f8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 140
+      height: 190
+      crop_type: focal_point

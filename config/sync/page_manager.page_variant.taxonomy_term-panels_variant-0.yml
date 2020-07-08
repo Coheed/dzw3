@@ -1,0 +1,71 @@
+uuid: 392303be-7ecf-462a-9756-82d06a9d298a
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.taxonomy_term
+    - views.view.em_channels_and_tags
+  module:
+    - panels
+    - system
+    - views
+id: taxonomy_term-panels_variant-0
+label: Default
+variant: panels_variant
+variant_settings:
+  blocks:
+    d0d3e9d3-4165-44d4-9f89-c626119f3a27:
+      id: page_title_block
+      label: 'Page title'
+      provider: core
+      label_display: '0'
+      region: page_title
+      weight: 1
+      context_mapping: {  }
+      uuid: d0d3e9d3-4165-44d4-9f89-c626119f3a27
+    0c77aade-e255-4263-876e-41a3a7f79ebc:
+      id: system_breadcrumb_block
+      label: Breadcrumbs
+      provider: system
+      label_display: '0'
+      region: breadcrumb
+      weight: 1
+      context_mapping: {  }
+      uuid: 0c77aade-e255-4263-876e-41a3a7f79ebc
+    34cd725c-26a3-44c3-b965-2fe4a76e8f91:
+      id: local_tasks_block
+      label: Tabs
+      provider: core
+      label_display: '0'
+      primary: true
+      secondary: true
+      region: tabs
+      weight: 1
+      context_mapping: {  }
+      uuid: 34cd725c-26a3-44c3-b965-2fe4a76e8f91
+    2a07a48a-ed8a-4435-85d4-28e2e9d0db24:
+      id: 'views_block:em_channels_and_tags-block_6'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 1
+      context_mapping: {  }
+      uuid: 2a07a48a-ed8a-4435-85d4-28e2e9d0db24
+  id: panels_variant
+  uuid: 3784c1ef-958d-4e15-bd06-80b1890f6eaa
+  label: null
+  weight: 0
+  layout: page_2
+  layout_settings: {  }
+  page_title: '[term:name]'
+  storage_type: page_manager
+  storage_id: taxonomy_term-panels_variant-0
+  builder: ipe
+page: taxonomy_term
+weight: -8
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

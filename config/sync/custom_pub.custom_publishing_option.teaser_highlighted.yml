@@ -1,0 +1,7 @@
+uuid: 654b5014-f597-48af-91b6-571a7f83700a
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_highlighted
+label: 'Teaser (Highlighted)'
+description: 'Use highlighted style teaser for this item.'

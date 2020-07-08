@@ -1,0 +1,83 @@
+uuid: c2769aba-2133-4bb9-9368-643d914a68c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page_combo
+    - views.view.em_combo_example_1
+    - views.view.em_editors_picks
+    - views.view.em_example_1
+    - views.view.em_featured_2_column_slider
+  module:
+    - panels
+    - system
+    - views
+id: home_page_combo-panels_variant-0
+label: 'Combo 1'
+variant: panels_variant
+variant_settings:
+  blocks:
+    2e1f755a-dc9d-46f7-b7b2-89287bb1ad58:
+      id: 'views_block:em_editors_picks-block_1'
+      label: 'Stories We Love'
+      provider: views
+      label_display: visible
+      views_label: 'Stories We Love'
+      items_per_page: none
+      region: top
+      weight: 1
+      context_mapping: {  }
+      uuid: 2e1f755a-dc9d-46f7-b7b2-89287bb1ad58
+    88655c2e-dc11-44f6-82a0-fa1fda4c4ca0:
+      id: 'views_block:em_combo_example_1-block_1'
+      label: Lifestyle
+      provider: views
+      label_display: visible
+      views_label: Lifestyle
+      items_per_page: none
+      region: top
+      weight: 2
+      context_mapping: {  }
+      uuid: 88655c2e-dc11-44f6-82a0-fa1fda4c4ca0
+    2088e012-600b-42af-b266-cad9231d3de1:
+      id: 'views_block:em_featured_2_column_slider-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: featured
+      weight: 1
+      context_mapping: {  }
+      uuid: 2088e012-600b-42af-b266-cad9231d3de1
+    922d79d1-17a7-43d5-823c-8665ea2b3f0e:
+      id: 'views_block:em_example_1-block_1'
+      label: Latest
+      provider: views
+      label_display: visible
+      views_label: Latest
+      items_per_page: none
+      region: middle_above_first
+      weight: 1
+      context_mapping: {  }
+      uuid: 922d79d1-17a7-43d5-823c-8665ea2b3f0e
+  id: panels_variant
+  uuid: ed571c52-f529-40d1-b3b8-66a82765f32b
+  label: null
+  weight: 0
+  layout: home_1
+  layout_settings: {  }
+  page_title: 'Combo 1'
+  storage_type: page_manager
+  storage_id: home_page_combo-panels_variant-0
+  builder: ipe
+page: home_page_combo
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: /combo/1
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

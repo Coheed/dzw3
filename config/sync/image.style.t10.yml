@@ -1,0 +1,15 @@
+uuid: 39eae240-6c07-4059-8ff6-a86e8c16a778
+langcode: en
+status: true
+dependencies: {  }
+name: t10
+label: 'Teaser Card (Max. w380)'
+effects:
+  2deec47b-549c-4d33-a908-4afbe0207e82:
+    uuid: 2deec47b-549c-4d33-a908-4afbe0207e82
+    id: image_scale
+    weight: 1
+    data:
+      width: 460
+      height: null
+      upscale: false

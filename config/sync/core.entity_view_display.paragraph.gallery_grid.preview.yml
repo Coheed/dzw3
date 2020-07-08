@@ -1,0 +1,27 @@
+uuid: 9e970863-5988-4e70-bd3f-1cb89644b34d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.gallery_grid.field_media
+    - paragraphs.paragraphs_type.gallery_grid
+  module:
+    - empty_fields
+id: paragraph.gallery_grid.preview
+targetEntityType: paragraph
+bundle: gallery_grid
+mode: preview
+content:
+  field_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: paragraph_preview
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

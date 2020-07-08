@@ -1,0 +1,10 @@
+uuid: d6386f5e-3623-4aa4-9489-81ebf8edb5f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.large_background
+label: 'Large Background'
+targetEntityType: media
+cache: true

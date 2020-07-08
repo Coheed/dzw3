@@ -1,0 +1,23 @@
+uuid: 501cf3a4-d0ce-4c75-8ea3-f3cd95c5d21e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - custom_pub.custom_publishing_option.editors_picks
+id: node.article.editors_picks
+field_name: editors_picks
+entity_type: node
+bundle: article
+label: 'Editor''s Picks'
+description: 'The item will appear in the Editor''s Picks block.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

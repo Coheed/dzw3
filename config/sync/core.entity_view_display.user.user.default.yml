@@ -1,0 +1,127 @@
+uuid: 619b43f1-a099-4eb3-b63c-dc7bd421b08c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_account_name
+    - field.field.user.user.field_facebook
+    - field.field.user.user.field_google_plus
+    - field.field.user.user.field_instagram
+    - field.field.user.user.field_linkedin
+    - field.field.user.user.field_pinterest
+    - field.field.user.user.field_short_bio
+    - field.field.user.user.field_twitter
+    - field.field.user.user.panelizer
+    - field.field.user.user.user_picture
+    - image.style.user_profile_picture
+  module:
+    - image
+    - link
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_facebook:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_google_plus:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_instagram:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_linkedin:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_pinterest:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_short_bio:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_twitter:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: user_profile_picture
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  field_account_name: true
+  langcode: true
+  member_for: true
+  panelizer: true
+  realname: true
