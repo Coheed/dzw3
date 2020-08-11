@@ -41,6 +41,13 @@
     <div class="parallax" data-parallax="scroll"
          data-image-src="{{ content['field_image'][0]['#markup'] }}">
     </div>
+
+    {% if content.field_copyright or content.field_source %}
+      <div class="media--image__credit">
+        {{ content.field_copyright }}
+        {{ content.field_source }}
+      </div>
+    {% endif %}
   </div>
 {% else %}
   <div class="pt-6">

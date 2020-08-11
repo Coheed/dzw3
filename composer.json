@@ -1,5 +1,5 @@
 {
-    "name": "thunder/thunder-project",
+    "name": "burdamagazinorg/thunder-project",
     "description": "Project template for Thunder projects with composer",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -17,12 +17,12 @@
             "email": "mladen.todorovic@burda.com"
         },
         {
-            "name": "Alex Pott",
-            "email": "alex.a.pott@gmail.com"
+            "name": "Timo Welde",
+            "email": "welde@galaniproject.de"
         },
         {
             "name": "Volker Killesreiter",
-            "email": "volker.killesreiter@burda.com"
+            "email": "killesreiter@burda.com"
         }
     ],
     "repositories": [
@@ -66,14 +66,12 @@
         }
     ],
     "require": {
-        "cweagans/composer-patches": "^1.6.5",
-        "drupal/core-composer-scaffold": "^8.8||^9.0",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/console": "^1.2",
         "composer/installers": "^1.2",
-        "drush/drush": "^9.0||^10.0",
-        "vlucas/phpdotenv": "^2.4",
+        "drush/drush": "^9.7.0",
         "oomphinc/composer-installers-extender": "^1.1",
-        "zaporylie/composer-drupal-optimizations": "^1.1",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "drupal/custom_pub": "^1.0@alpha",
@@ -94,21 +92,17 @@
         "drupal/we_megamenu": "^1.9"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8||^9.0"
+        "webflo/drupal-core-require-dev": "^8.8"
     },
     "replace": {
       "npm-asset/shariff": "*"
-    },
-    "conflict": {
-        "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "DrupalProject\\composer\\": "scripts/composer/"
-        },
-        "files": ["load.environment.php"]
+        }
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -126,22 +120,20 @@
         ]
     },
     "extra": {
-        "composer-exit-on-patch-failure": true,
-        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-types": ["npm-asset", "bower-asset"],
         "installer-paths": {
             "docroot/core": ["type:drupal-core"],
             "docroot/libraries/masonry": ["custom-asset/masonry"],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
+                "type:npm-asset",
+                "type:bower-asset"
             ],
             "docroot/modules/contrib/{$name}": ["type:drupal-module"],
             "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
-      
         "patches": {
           "drupal/core": {
             "2834346: Contextual links double trigger": "https://www.drupal.org/files/issues/2019-11-15/drupal-contextual_links_double_trigger-2834346-19.patch"
@@ -160,15 +152,9 @@
             "2936099: Notice: Undefined property: stdClass::$size in mailchimp_insert_drupal_form_tag()": "https://www.drupal.org/files/issues/2018-06-07/suppress-size-notice-2936099-6.patch"
           }
         },
-        "enable-patching": true,
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "docroot/"
-            }
-        }
+        "enable-patching": true
     },
     "config": {
-        "bin-dir": "bin/",
-        "sort-packages": true
+        "bin-dir": "bin/"
     }
 }

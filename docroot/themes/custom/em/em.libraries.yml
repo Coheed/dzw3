@@ -38,6 +38,7 @@ global-styling:
       assets/css/components/commerce/commerce-cart-block.css: {}
       assets/css/components/commerce/commerce-checkout.css: {}
       assets/css/components/views/views--views-format.css: {}
+      assets/css/content/media/media--image-default.css: {}
       assets/css/content/media/media--image-background.css: {}
       assets/css/content/media/media--image-parallax.css: {}
       assets/css/content/paragraphs/paragraphs.css: {}
@@ -102,13 +103,13 @@ sticky-header:
 fluid-layout:
   css:
     state:
-      assets/css/lyout/layout--page-fluid.css: {}
+      assets/css/layout/header/header--fluid.css: {}
 
 
 fluid-layout-with-header-overlay:
   css:
     state:
-      assets/css/lyout/layout--page-fluid.css: {}
+      assets/css/layout/header/header--fluid.css: {}
   dependencies:
     - em/header-overlay-style
 

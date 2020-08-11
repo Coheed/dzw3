@@ -297,6 +297,7 @@
 .masonry--2-columns,
 .masonry--3-columns,
 .masonry--4-columns {
+  .masonry,
   .masonry-layout {
     @include make-row;
 
@@ -311,36 +312,45 @@
 // Two column masonry
 //
 .masonry--2-columns {
-  .masonry-layout .masonry-item {
-    @include media-breakpoint-up(md) {
-      @include make-col(6);
+  .masonry,
+  .masonry-layout {
+    .masonry-item {
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
     }
   }
 }
 
 // Three column masonry,
 .masonry--3-columns {
-  .masonry-layout .masonry-item {
-    @include media-breakpoint-up(md) {
-      @include make-col(6);
-    }
-    @include media-breakpoint-up(lg) {
-      @include make-col(4);
+  .masonry,
+  .masonry-layout {
+    .masonry-item {
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(4);
+      }
     }
   }
 }
 
 // Four column masonry,
 .masonry--4-columns {
-  .masonry-layout .masonry-item {
-    @include media-breakpoint-up(md) {
-      @include make-col(6);
-    }
-    @include media-breakpoint-up(lg) {
-      @include make-col(4);
-    }
-    @include media-breakpoint-up(xl) {
-      @include make-col(3);
+  .masonry,
+  .masonry-layout {
+    .masonry-item {
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(4);
+      }
+      @include media-breakpoint-up(xl) {
+        @include make-col(3);
+      }
     }
   }
 }

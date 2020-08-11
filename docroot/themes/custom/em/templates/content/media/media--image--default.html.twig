@@ -34,9 +34,19 @@
 
 {% if content %}
   <figure{{ attributes }}>
-    {{ content.field_image }}
+    <div class="media--image__wrapper">
+      {{ content.field_image }}
+
+      {% if content.field_copyright or content.field_source %}
+        <div class="media--image__credit">
+          {{ content.field_copyright }}
+          {{ content.field_source }}
+        </div>
+      {% endif %}
+    </div>
+
     {% if content.field_description %}
-      <figcaption>{{ content|without('field_image') }}</figcaption>
+      <figcaption>{{ content.field_description }}</figcaption>
     {% endif %}
   </figure>
 {% endif %}

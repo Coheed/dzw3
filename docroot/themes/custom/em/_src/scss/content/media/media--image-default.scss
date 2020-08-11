@@ -1,0 +1,26 @@
+//
+// Dependencies
+//
+@import "../../dependencies";
+
+.media--image__wrapper {
+  position: relative;
+}
+
+.media--image__credit {
+  background: rgba(#000, .5);
+  display: flex;
+  padding: .25rem .5rem;
+  color: #FFF;
+  font-size: .626rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  > div {
+    margin-right: .5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
